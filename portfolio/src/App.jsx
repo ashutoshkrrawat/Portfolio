@@ -12,7 +12,7 @@ function App() {
     <>
       <Particles
         className="fixed inset-0 -z-10"
-        particleCount={400}
+        particleCount={200}
         particleSpread={15}
         speed={0.1}
         particleColors={["#008080", "#ffffff", "#ffffff"]}

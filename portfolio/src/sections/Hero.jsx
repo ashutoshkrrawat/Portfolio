@@ -1,6 +1,7 @@
 // src/sections/Hero.jsx
 import profilePic from "../assets/profilePic.jpg"; // or .png if you have transparent bg
 import AnimatedScrollArrow from "../components/MotionSlideArrow";
+import Button from "../components/ModernButton";
 
 export default function Hero() {
     return (
@@ -46,9 +47,13 @@ export default function Hero() {
                     <p className="max-w-md text-base md:text-lg text-white/60">
                         I build smooth and animated web experiences using React and modern UI.
                     </p>
+                    <div className="mt-8 mr-20">
+                    <Button/>
+
+                    </div>
+
                     <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
                     <AnimatedScrollArrow/>
-
                     </div>
 
 
@@ -108,3 +113,4 @@ export default function Hero() {
         </section>
     );
 }
+

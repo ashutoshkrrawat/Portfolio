@@ -2,8 +2,8 @@
 import profilePic from "../assets/profilePic.jpg"; // or .png if you have transparent bg
 import AnimatedScrollArrow from "../components/MotionSlideArrow";
 import Button from "../components/ModernButton";
-import EncryptedText from "../components/EncryptedText";
 import { WordRotate } from "../components/WordRotate";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 export default function Hero() {
     return (
@@ -44,8 +44,6 @@ export default function Hero() {
                     </span>
 
                 </span>
-
-
 
                 <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12 mt-20">
                     {/* ---------- LEFT : Text ---------- */}

@@ -5,11 +5,13 @@ import About from './sections/About.jsx';
 import Skills from './sections/Skills.jsx';
 import Projects from './sections/Projects.jsx';
 import Particles from './components/Particles.jsx';
+import { MouseTrail } from './components/MouseTrail.jsx';
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <MouseTrail/>
       <Particles
         className="fixed inset-0 -z-10"
         particleCount={200}

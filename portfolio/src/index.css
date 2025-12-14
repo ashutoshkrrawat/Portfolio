@@ -59,3 +59,25 @@
       "ROND" 50;
   }
 }
+.cursor-circle {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursor-circle-hidden {
+  opacity: 0;
+}
+
+.cursor-circle-thin {
+  transform: scale(0.5);
+  opacity: 0.5;
+}
+
+body{
+  cursor: none;
+}

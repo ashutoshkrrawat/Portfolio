@@ -1,94 +1,252 @@
-import profilePic from "../assets/anshimg7.png";
+import { WordRotate } from "@/components/WordRotate";
+import { Badge } from "@/components/ui/badge";
+import profilePic from "../assets/anshimg6.png";
+import { useEffect, useState } from "react";
 
 export default function About() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = document.getElementById('about');
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
+  const skills = [
+    "React", "Tailwind CSS", "JavaScript", "TypeScript", 
+    "Node.js", "Next.js", "MongoDB", "Git"
+  ];
+
+  const interests = [
+    "Web Development", "UI/UX Design", "Problem Solving", "Open Source"
+  ];
+
   return (
     <section
       id="about"
-      className="relative py-24 overflow-hidden min-h-screen flex items-center
-      bg-[#060b12]
-    [mask-image:linear-gradient(to_bottom,transparent,black_20%)]
-    [-webkit-mask-image:linear-gradient(to_bottom,transparent,black_20%)]
+      className="
+        relative
+        min-h-screen
+        py-24
+        overflow-hidden
+        bg-[#060b12]
+        [mask-image:linear-gradient(to_bottom,transparent,black_20%)]
+        [-webkit-mask-image:linear-gradient(to_bottom,transparent,black_20%)]
       "
     >
-      {/* GRID BACKGROUND WITH LEFT-TO-RIGHT FADE */}
+      {/* SUBTLE GRID BACKGROUND */}
       <div
         className="absolute inset-0 -z-10"
         style={{
-          backgroundImage:
-            "repeating-linear-gradient(0deg, rgba(16, 185, 183, 0.08) 0 1px, transparent 1px 50px), repeating-linear-gradient(90deg, rgba(16, 185, 183, 0.08) 0 1px, transparent 1px 50px)",
+          backgroundImage: `
+            repeating-linear-gradient(
+              0deg,
+              rgba(255,255,255,0.05) 0 1px,
+              transparent 1px 100px
+            ),
+            repeating-linear-gradient(
+              90deg,
+              rgba(255,255,255,0.05) 0 1px,
+              transparent 1px 100px
+            )
+          `,
           backgroundColor: "#000000",
         }}
       />
-      
-      {/* GRADIENT OVERLAY - FADES GRID FROM LEFT TO RIGHT */}
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          background: "linear-gradient(to left, transparent 0%, rgba(10, 14, 39, 0.7) 90%, rgba(10, 14, 39, 1) 100%)",
-        }}
-      />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col md:flex-row items-center justify-between gap-12">
-        
-        {/* LEFT SIDE CONTENT */}
-        <div className="w-full md:w-1/2 z-10">
-          <h3 className="text-sm text-[#6CF2F0] font-semibold mb-3 uppercase tracking-wider">
-            About Me
-          </h3>
+      {/* MINIMAL PARTICLES - Tiny dots */}
+      {/* <div className="absolute inset-0 -z-10 overflow-hidden">
+        {[...Array(100)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full bg-white/50"
+            style={{
+              width: Math.random() * 3 + 1 + "px",
+              height: Math.random() * 3 + 1 + "px",
+              left: Math.random() * 100 + "%",
+              top: Math.random() * 100 + "%",
+              animation: `floatSubtle ${Math.random() * 15 + 10}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 5}s`,
+            }}
+          />
+        ))}
+      </div> */}
 
-          <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
-            Hi, I'm  
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10B9B7] to-[#6CF2F0]">
-              {" "}Ashutosh
-            </span>
+      {/* SECTION HEADING */}
+      <div className="text-center mb-20 mt-10">
+        <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
+          <h2 className="md:text-5xl font-bold text-white py-10">
+            <WordRotate 
+              words={["About Me", "Who I Am", "My Journey"]}
+              className="font-doto text-6xl"
+            />
           </h2>
-
-          <p className="text-white/70 mb-6 max-w-lg text-lg leading-relaxed">
-            I'm a web developer focused on building smooth, animated and modern
-            user interfaces using React, Tailwind, and motion libraries.
-          </p>
-
-          <div className="flex gap-4 flex-wrap">
-            <a
-              href="#projects"
-              className="px-6 py-3 rounded-lg bg-[#10B9B7] text-black font-semibold shadow-md hover:brightness-110 transition"
-            >
-              Hire Me
-            </a>
-
-            <a
-              href="#contact"
-              className="px-6 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 transition"
-            >
-              Let's Talk
-            </a>
-          </div>
+          <div className="mt-4 h-0.5 w-20 mx-auto bg-gradient-to-r from-transparent via-[#10B9B7] to-transparent" />
         </div>
+      </div>
 
-        {/* RIGHT SIDE — ENLARGED IMAGE WITH FADE EFFECT */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end relative">
-          <div className="relative w-full h-[500px] md:h-[600px] flex items-center justify-center">
-            {/* Glow effect behind image */}
-            {/* <div
-              className="absolute inset-0 bg-gradient-to-br from-[#10B9B7]/20 to-[#6CF2F0]/20 blur-3xl"
-            /> */}
-            
-            {/* Image with fade-out edges */}
-            <div className="relative w-full h-full flex items-center justify-end">
-              <img
-                src={profilePic}
-                alt="Profile"
-                className="h-full w-auto object-cover rounded-xl"
-                style={{
-                  maskImage: "radial-gradient(ellipse 80% 90% at center, black 40%, transparent 100%)",
-                  WebkitMaskImage: "radial-gradient(ellipse 80% 90% at center, black 40%, transparent 100%)",
-                }}
-              />
+      {/* CONTENT */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-16">
+        
+        {/* LEFT — TEXT */}
+        <div className={`w-full md:w-1/2 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
+          <div className="space-y-6">
+            {/* Introduction */}
+            <div className={`transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+                Hi, I'm{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10B9B7] to-[#6CF2F0]">
+                  Ashutosh
+                </span>
+              </h3>
+
+              <p className="text-white/80 text-lg leading-relaxed mb-4">
+                I'm a passionate full-stack web developer and student specializing in 
+                modern web technologies. I love creating seamless digital experiences 
+                that combine beautiful design with powerful functionality.
+              </p>
+
+              <p className="text-white/80 text-lg leading-relaxed">
+                Currently pursuing my degree while building real-world projects, I'm 
+                constantly learning and pushing the boundaries of what's possible on the web. 
+                My focus is on writing clean, efficient code and crafting intuitive user interfaces.
+              </p>
+            </div>
+
+            {/* What I Do Section */}
+            <div className={`pt-4 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h4 className="text-xl font-semibold text-white mb-3">
+                What I Do
+              </h4>
+              <p className="text-white/80 leading-relaxed">
+                I specialize in building responsive, performant web applications using 
+                React and modern JavaScript frameworks. From concept to deployment, I handle 
+                both frontend aesthetics and backend logic to create complete solutions.
+              </p>
+            </div>
+
+            {/* Skills Section */}
+            <div className={`pt-2 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h4 className="text-sm font-semibold text-white mb-3 uppercase tracking-wider">
+                Technical Skills
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {skills.map((skill, idx) => (
+                  <Badge
+                    key={skill}
+                    variant="secondary"
+                    className="bg-white/5 border border-white/10 text-white/70 hover:bg-white/10 hover:border-[#10B9B7]/30 hover:text-teal-300 transition-all duration-300 px-4 py-1.5 text-sm font-normal"
+                    style={{
+                      animation: `fadeInUp 0.5s ease-out ${idx * 0.08}s backwards`
+                    }}
+                  >
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+
+            {/* Interests Section */}
+            <div className={`pt-2 transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h4 className="text-sm font-semibold text-white mb-3 uppercase tracking-wider">
+                Areas of Interest
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {interests.map((interest, idx) => (
+                  <Badge
+                    key={interest}
+                    variant="outline"
+                    className="border-white/20 text-white/60 hover:bg-white/5 hover:text-teal-300 transition-all duration-300 px-4 py-1.5 text-sm font-normal"
+                    style={{
+                      animation: `fadeInUp 0.5s ease-out ${(idx + skills.length) * 0.08}s backwards`
+                    }}
+                  >
+                    {interest}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+
+            {/* Additional Info */}
+            <div className={`pt-4 flex items-center gap-6 text-sm text-white/50 transition-all duration-700 delay-[900ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 bg-[#10B9B7] rounded-full" />
+                <span>Electrical Engineering Student</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 bg-[#10B9B7] rounded-full" />
+                <span>Based in India</span>
+              </div>
             </div>
           </div>
         </div>
 
+        {/* RIGHT — IMAGE */}
+        <div className={`w-full md:w-1/2 flex justify-center md:justify-end transition-all duration-1000 delay-[600ms] ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`}>
+          <div className="relative h-[500px] md:h-[600px] group">
+            
+            {/* Image Container */}
+            <div className="relative h-full overflow-hidden rounded-xl border border-white/30 transition-all duration-500">
+              <img
+                src={profilePic}
+                alt="Ashutosh"
+                className="h-full w-auto object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                style={{
+                  maskImage:
+                    "radial-gradient(ellipse 80% 90% at center, black 40%, transparent 100%)",
+                  WebkitMaskImage:
+                    "radial-gradient(ellipse 80% 90% at center, black 40%, transparent 100%)",
+                }}
+              />
+              
+              {/* Subtle Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#060b12]/80 via-transparent to-transparent" />
+            </div>
+
+            {/* Decorative Corner Elements */}
+            <div className={`absolute -top-4 -right-4 w-20 h-20 border-t-2 border-r-2 border-[#10B9B7]/30 rounded-tr-xl transition-all duration-700 delay-[800ms] ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`} />
+            <div className={`absolute -bottom-4 -left-4 w-20 h-20 border-b-2 border-l-2 border-[#10B9B7]/30 rounded-bl-xl transition-all duration-700 delay-[1000ms] ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`} />
+          </div>
+        </div>
+
       </div>
+
+      <style jsx>{`
+        @keyframes floatSubtle {
+          0%, 100% { transform: translate(0, 0); }
+          33% { transform: translate(15px, -15px); }
+          66% { transform: translate(-10px, 10px); }
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </section>
   );
 }

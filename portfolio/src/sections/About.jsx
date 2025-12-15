@@ -95,7 +95,7 @@ export default function About() {
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
           <h2 className="md:text-5xl font-bold text-white py-10">
             <WordRotate 
-              words={["About Me", "Who I Am", "My Journey"]}
+              words={["About Me", "Who I Am", "Get to Know Me"]}
               className="font-doto text-6xl"
             />
           </h2>

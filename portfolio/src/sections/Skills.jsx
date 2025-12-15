@@ -1,4 +1,6 @@
 import GithubContributions from "@/components/GithubContributions";
+import SimpleRadarChart from "@/components/RadarCharts";
+import PieChartWithPaddingAngle from "@/components/PieCharts";
 
 function Skills() {
   return (
@@ -7,6 +9,8 @@ function Skills() {
       {/* GitHub stats card here */}
 
       <GithubContributions />
+        <SimpleRadarChart />
+        <PieChartWithPaddingAngle />
     </section>
   );
 }

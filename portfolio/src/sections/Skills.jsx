@@ -1,10 +1,14 @@
-import React from 'react'
+import GithubContributions from "@/components/GithubContributions";
 
 function Skills() {
-    return (
-        <>
-        </>
-    )
+  return (
+    <section className="space-y-12">
+      {/* Your radar chart here */}
+      {/* GitHub stats card here */}
+
+      <GithubContributions />
+    </section>
+  );
 }
 
-export default Skills
+export default Skills;

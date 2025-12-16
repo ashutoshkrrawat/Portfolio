@@ -1,72 +1,87 @@
-
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { IconBrandGithub, IconChartRadar, IconUser } from "@tabler/icons-react";
+import {
+  IconBrandGithub,
+  IconChartRadar,
+  IconUser,
+} from "@tabler/icons-react";
 
 import SkillsRadar from "@/components/RadarCharts";
 import GithubContributions from "@/components/GithubContributions";
 import ContributionTrend from "@/components/GithubLineGraph";
 import PieChartWithPaddingAngle from "@/components/PieCharts";
-import { DotBackground } from "@/components/DottedBackground";
 
 export default function PortfolioBento() {
   return (
-    <BentoGrid className="max-w-7xl mx-auto ">
+    <section className="bg-black py-20">
       
-      {/* ================= ROW 1 ================= */}
+      {/* ================= SKILLS HEADING ================= */}
+      <div className="max-w-7xl mx-auto px-4 mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-white flex justify-center">
+          Skills
+        </h2>
+        <p className="mt-2 text-white/60 max-w-xl">
+          A snapshot of my technical strengths, consistency, and progress over time.
+        </p>
+      </div>
 
-      {/* GitHub Heatmap */}
-      <BentoGridItem
-        title=""
-        description=""
-        header={
-            <GithubContributions />
-        }
-        icon={<IconBrandGithub className="h-4 w-4 text-[#14d6d2]" />}
-        className="md:col-span-1 bg-transparent"
-      />
+      {/* ================= BENTO GRID ================= */}
+      <BentoGrid className="max-w-7xl mx-auto px-4">
+        
+        {/* ================= ROW 1 ================= */}
 
-      {/* Contribution Trend Line Graph */}
-      <BentoGridItem
-        title=""
-        description=""
-        header={<ContributionTrend />}
-        icon={<IconChartRadar className="h-4 w-4 text-[#14d6d2]" />}
-        className="md:col-span-2 bg-transparent"
-      />
+        {/* GitHub Heatmap */}
+        <BentoGridItem
+          title="GitHub Contributions"
+          description="Consistency in the last year"
+          header={<GithubContributions />}
+          icon={<IconBrandGithub className="h-4 w-4 text-[#14d6d2]" />}
+          className="md:col-span-1 bg-transparent"
+        />
 
-      {/* ================= ROW 2 ================= */}
+        {/* Contribution Trend */}
+        <BentoGridItem
+          title="Contribution Trend"
+          description="Daily activity pattern"
+          header={<ContributionTrend />}
+          icon={<IconChartRadar className="h-4 w-4 text-[#14d6d2]" />}
+          className="md:col-span-2 bg-transparent"
+        />
 
-      {/* Pie Chart */}
-      <BentoGridItem
-        title="Progress Breakdown"
-        description=""
-        header={<PieChartWithPaddingAngle />}
-        icon={<IconUser className="h-4 w-4 text-[#14d6d2]" />}
-        className="md:col-span-1 bg-transparent"
-      />
+        {/* ================= ROW 2 ================= */}
 
-      {/* Radar Chart */}
-      <BentoGridItem
-        title=""
-        description=""
-        header={<SkillsRadar />}
-        icon={<IconChartRadar className="h-4 w-4 text-[#14d6d2]" />}
-        className="md:col-span-1 bg-transparent"
-      />
+        {/* Pie Chart */}
+        <BentoGridItem
+          title="Progress Breakdown"
+          description="Skill distribution overview"
+          header={<PieChartWithPaddingAngle />}
+          icon={<IconUser className="h-4 w-4 text-[#14d6d2]" />}
+          className="md:col-span-1 bg-transparent"
+        />
 
-      {/* Projects Count */}
-      <BentoGridItem
-        title="Projects"
-        description="Completed & deployed."
-        header={
-          <div className="flex items-center justify-center h-full">
-            <span className="text-6xl font-bold text-[#14d6d2]">17</span>
-          </div>
-        }
-        icon={<IconUser className="h-4 w-4 text-[#14d6d2]" />}
-        className="md:col-span-1 bg-transparent"
-      />
-    </BentoGrid>
+        {/* Radar Chart */}
+        <BentoGridItem
+          title="Skill Overview"
+          description="Self-assessment radar"
+          header={<SkillsRadar />}
+          icon={<IconChartRadar className="h-4 w-4 text-[#14d6d2]" />}
+          className="md:col-span-1 bg-transparent"
+        />
+
+        {/* Projects Count */}
+        <BentoGridItem
+          title="Projects"
+          description="Completed & deployed"
+          header={
+            <div className="flex items-center justify-center h-full">
+              <span className="text-6xl font-bold text-[#14d6d2]">
+                17
+              </span>
+            </div>
+          }
+          icon={<IconUser className="h-4 w-4 text-[#14d6d2]" />}
+          className="md:col-span-1 bg-transparent"
+        />
+      </BentoGrid>
+    </section>
   );
 }
-

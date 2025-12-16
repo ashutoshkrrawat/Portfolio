@@ -3,12 +3,12 @@ import { GitHubCalendar } from "react-github-calendar";
 function GithubHeatmap() {
   return (
     <div>
-      <p className="text-sm text-[#94a3b8] mb-2">GitHub Contributions</p>
+      <p className="text-sm text-[#ffffff] mb-2">GitHub Contributions</p>
 
       <GitHubCalendar
         username="ashutoshkrrawat"
-        transformData={(data) => data.slice(-150)}
-        blockSize={15}
+        transformData={(data) => data.slice(-200)}
+        blockSize={10}
         blockMargin={2}
         fontSize={12}
         colorScheme="dark"
@@ -23,7 +23,7 @@ function GithubHeatmap() {
         }}
       />
 
-      <p className="mt-2 text-xs text-[#94a3b8]">
+      <p className="mt-2 text-xs text-[#eff2f7]">
         Contributions in the last year
       </p>
     </div>

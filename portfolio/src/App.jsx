@@ -28,9 +28,9 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <DotBackground>
-        <Skills />
-      </DotBackground>
+      
+        <Skills className="bg-rgb(14, 16, 15)"/>
+      
       <Projects />
     </>
   )

@@ -9,7 +9,7 @@ import {
 } from "recharts";
 
 const data = [
-  { day: 15, value: 18 },
+  { day: 15, value: 1 },
   { day: 16, value: 16 },
   { day: 17, value: 15 },
   { day: 18, value: 24 },
@@ -28,12 +28,13 @@ const data = [
 
 function ContributionTrend() {
   return (
-    <div className="h-[260px]">
-      <h3 className="text-sm text-[#14d6d2] mb-3 text-center">
+    <div className="h-[200px]">
+      <h3 className="text-sm text-[#d6dedd] mb-3 text-center">
         Contribution Trend
       </h3>
 
       <ResponsiveContainer>
+        
         <LineChart data={data}>
           <CartesianGrid stroke="#1f2937" strokeDasharray="3 3" />
           <XAxis dataKey="day" stroke="#94a3b8" />

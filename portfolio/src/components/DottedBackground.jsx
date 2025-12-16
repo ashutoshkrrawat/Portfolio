@@ -9,7 +9,7 @@ export function DotBackground({ className, children }) {
         className={cn(
           "absolute inset-0",
           "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#ffffff_1px,transparent_1px)]",
+          "[background-image:radial-gradient(white_1px,transparent_1px)]",
           "opacity-20"
         )}
       />

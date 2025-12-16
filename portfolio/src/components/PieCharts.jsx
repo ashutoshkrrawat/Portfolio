@@ -26,4 +26,4 @@ export default function PieChartWithPaddingAngle({ isAnimationActive = true }) {
       </ResponsiveContainer>
     </div>
   );
-}
+} 

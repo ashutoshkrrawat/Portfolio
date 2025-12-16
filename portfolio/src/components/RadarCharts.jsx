@@ -3,37 +3,37 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'r
 // #region Sample data
 const data = [
   {
-    subject: 'Math',
+    subject: 'Speaking',
     A: 120,
     B: 110,
     fullMark: 150,
   },
   {
-    subject: 'Chinese',
+    subject: 'CP',
     A: 98,
     B: 130,
     fullMark: 150,
   },
   {
-    subject: 'English',
+    subject: 'Brainrotting',
     A: 86,
     B: 130,
     fullMark: 150,
   },
   {
-    subject: 'Geography',
+    subject: 'Developing',
     A: 99,
     B: 100,
     fullMark: 150,
   },
   {
-    subject: 'Physics',
+    subject: 'CGPA',
     A: 85,
     B: 90,
     fullMark: 150,
   },
   {
-    subject: 'History',
+    subject: '',
     A: 65,
     B: 85,
     fullMark: 150,

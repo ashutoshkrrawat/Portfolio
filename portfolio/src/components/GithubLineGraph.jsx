@@ -9,21 +9,15 @@ import {
 } from "recharts";
 
 const data = [
-  { day: 15, value: 1 },
-  { day: 16, value: 16 },
-  { day: 17, value: 15 },
-  { day: 18, value: 24 },
-  { day: 19, value: 20 },
-  { day: 20, value: 20 },
-  { day: 21, value: 17 },
-  { day: 22, value: 8 },
-  { day: 23, value: 10 },
-  { day: 24, value: 6 },
-  { day: 25, value: 6 },
-  { day: 26, value: 6 },
-  { day: 27, value: 6 },
-  { day: 28, value: 7 },
-  { day: 29, value: 12 },
+  { day: 11, value: 1 },
+  { day: 12, value: 0 },
+  { day: 13, value: 8 },
+  { day: 14, value: 0 },
+  { day: 15, value: 2 },
+  { day: 16, value: 10 },
+  { day: 17, value: 17 },
+  { day: 18, value: 8 },
+  
 ];
 
 function ContributionTrend() {

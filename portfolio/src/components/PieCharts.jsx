@@ -6,10 +6,10 @@ import {
 } from "recharts";
 
 const data = [
-  { name: "Frontend", value: 85, color: "#14d6d2" },
-  { name: "Backend", value: 70, color: "#0f766e" },
-  { name: "DSA", value: 65, color: "#134e4a" },
-  { name: "UI/UX", value: 75, color: "#5eead4" },
+  { name: "Node js", value: 85, color: "#14d6d2" },
+  { name: "MongoDB", value: 30, color: "#0f766e" },
+  { name: "Express", value: 50, color: "#134e4a" },
+  { name: "React", value: 75, color: "#5eead4" },
 ];
 
 const renderLabel = ({ cx, cy, midAngle, outerRadius, name, value }) => {

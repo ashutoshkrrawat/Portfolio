@@ -27,7 +27,7 @@ export default function PortfolioBento() {
             // Delay chart loading slightly for better animation effect
             setTimeout(() => {
               setShouldLoadCharts(true);
-            }, 300);
+            }, 500);
           }
         });
       },
@@ -54,43 +54,7 @@ export default function PortfolioBento() {
       {/* BLEND FROM PREVIOUS SECTION */}
 <div className="pointer-events-none absolute top-0 left-0 w-full h-40 bg-gradient-to-t from-transparent to-[#060b12] z-10" />
 
-      {/* SUBTLE GRID BACKGROUND */}
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: `
-            repeating-linear-gradient(
-              0deg,
-              rgba(16,185,183,0.03) 0 1px,
-              transparent 1px 100px
-            ),
-            repeating-linear-gradient(
-              90deg,
-              rgba(16,185,183,0.03) 0 1px,
-              transparent 1px 100px
-            )
-          `,
-        }}
-      />
-
-      {/* MINIMAL PARTICLES */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        {[...Array(60)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full"
-            style={{
-              width: Math.random() * 2 + 1 + "px",
-              height: Math.random() * 2 + 1 + "px",
-              left: Math.random() * 100 + "%",
-              top: Math.random() * 100 + "%",
-              backgroundColor: i % 3 === 0 ? 'rgba(16,185,183,0.4)' : 'rgba(108,242,240,0.3)',
-              animation: `floatSubtle ${Math.random() * 15 + 10}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 5}s`,
-            }}
-          />
-        ))}
-      </div>
+      
       
       {/* ================= SKILLS HEADING ================= */}
       <div className={`max-w-7xl mx-auto px-4 mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
@@ -127,8 +91,8 @@ export default function PortfolioBento() {
                 {shouldLoadCharts ? (
                   <GithubContributions />
                 ) : (
-                  <div className="flex items-center justify-center h-full">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#10B9B7]"></div>
+                  <div className="flex items-center justify-center h-full ">
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#10B9B7] "></div>
                   </div>
                 )}
               </div>
@@ -224,21 +188,21 @@ export default function PortfolioBento() {
             title={
               <span className="flex items-center gap-2 text-white">
                 <IconTrophy className="h-4 w-4 text-[#10B9B7]" />
-                Projects
+                Typing
               </span>
             }
             description={
               <span className="text-gray-400">
-                Completed & deployed
+                Monkeytype
               </span>
             }
             header={
               <div className="flex flex-col items-center justify-center h-full py-4">
                 <span className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#10B9B7] to-[#6CF2F0]">
-                  17
+                  93+
                 </span>
                 <span className="text-xs text-gray-400 uppercase tracking-wider mt-2">
-                  Projects
+                  Current Typing Speed (WPM)
                 </span>
                 <div className="mt-4 flex gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#10B9B7] animate-pulse" />

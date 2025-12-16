@@ -2,13 +2,23 @@ import { GitHubCalendar } from "react-github-calendar";
 
 function GithubHeatmap() {
   return (
-    <div>
-      <p className="text-sm text-[#ffffff] mb-2">GitHub Contributions</p>
+    <div
+      className="
+        rgh-wrapper
+        text-white
+      "
+      style={{
+        "--rgh-text-color": "#e5e7eb",
+        "--rgh-label-color": "#9ca3af",
+        "--rgh-legend-color": "#9ca3af",
+      }}
+    >
+      <p className="text-sm text-white mb-2">GitHub Contributions</p>
 
       <GitHubCalendar
         username="ashutoshkrrawat"
         transformData={(data) => data.slice(-150)}
-        blockSize={13}
+        blockSize={14}
         blockMargin={2}
         fontSize={12}
         colorScheme="dark"
@@ -23,7 +33,7 @@ function GithubHeatmap() {
         }}
       />
 
-      <p className="mt-2 text-xs text-[#eff2f7]">
+      <p className="mt-2 text-xs text-gray-400">
         Contributions in the last year
       </p>
     </div>

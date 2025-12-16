@@ -51,7 +51,9 @@ export default function PortfolioBento() {
       id="skills-section"
       className="relative py-20 overflow-hidden bg-gradient-to-br from-[#000000] via-[#0f1417] to-[#03070e]"
     >
-      
+      {/* BLEND FROM PREVIOUS SECTION */}
+<div className="pointer-events-none absolute top-0 left-0 w-full h-40 bg-gradient-to-t from-transparent to-[#060b12] z-10" />
+
       {/* SUBTLE GRID BACKGROUND */}
       <div
         className="absolute inset-0 -z-10"

@@ -28,7 +28,7 @@ const data = [
 
 function ContributionTrend() {
   return (
-    <div className="h-[200px]">
+    <div className="w-full h-[180px]">
       <h3 className="text-sm text-[#d6dedd] mb-3 text-center">
         Contribution Trend
       </h3>

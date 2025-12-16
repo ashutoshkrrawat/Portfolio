@@ -7,8 +7,8 @@ function GithubHeatmap() {
 
       <GitHubCalendar
         username="ashutoshkrrawat"
-        transformData={(data) => data.slice(-140)}
-        blockSize={9}
+        transformData={(data) => data.slice(-150)}
+        blockSize={15}
         blockMargin={2}
         fontSize={12}
         colorScheme="dark"

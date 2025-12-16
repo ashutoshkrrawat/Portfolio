@@ -58,7 +58,7 @@ const SimpleRadarChart = () => {
       <PolarGrid />
       <PolarAngleAxis dataKey="subject" />
       <PolarRadiusAxis />
-      <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+      <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#14d6d2" fillOpacity={0.4} />
     </RadarChart>
   );
 };

@@ -6,6 +6,7 @@ import SkillsRadar from "@/components/RadarCharts";
 import GithubContributions from "@/components/GithubContributions";
 import ContributionTrend from "@/components/GithubLineGraph";
 import PieChartWithPaddingAngle from "@/components/PieCharts";
+import { DotBackground } from "@/components/DottedBackground";
 
 export default function PortfolioBento() {
   return (
@@ -17,7 +18,9 @@ export default function PortfolioBento() {
       <BentoGridItem
         title=""
         description=""
-        header={<GithubContributions />}
+        header={
+            <GithubContributions />
+        }
         icon={<IconBrandGithub className="h-4 w-4 text-[#14d6d2]" />}
         className="md:col-span-1 bg-transparent"
       />

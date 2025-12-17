@@ -1,11 +1,5 @@
-import React from 'react'
+import ProjectsSection from "@/components/Projects/ProjectsSection";
 
-function Projects() {
-    return (
-        <>
-        
-        </>
-    )
+export default function ProjectsPage() {
+  return <ProjectsSection />;
 }
-
-export default Projects

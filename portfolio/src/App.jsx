@@ -28,10 +28,11 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      
-        <Skills className="bg-rgb(14, 16, 15)"/>
-      
+      <Skills className="bg-rgb(14, 16, 15)"/>
+      <DotBackground>
+
       <Projects />
+      </DotBackground>
     </>
   )
 }

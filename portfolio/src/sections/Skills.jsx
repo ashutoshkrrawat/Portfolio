@@ -223,6 +223,9 @@ export default function PortfolioBento() {
           66% { transform: translate(-10px, 10px); }
         }
       `}</style>
+      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-[#060b12]" />
+
     </section>
+    
   );
 }

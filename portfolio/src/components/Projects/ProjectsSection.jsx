@@ -4,6 +4,7 @@ import { X } from "lucide-react";
 import { projects } from "@/data/Project";
 import ProjectCard from "./ProjectCard";
 import TechFilter from "./TechFilter";
+import { WordRotate } from "../WordRotate";
 
 export default function ProjectsSection() {
   const [selectedTags, setSelectedTags] = useState([]);
@@ -26,7 +27,7 @@ export default function ProjectsSection() {
         );
 
   return (
-    <section className="relative py-24 overflow-hidden bg-black">
+    <section className="relative py-24 overflow-hidden bg-transparent">
       
       {/* ===== TOP BLEND (IMPORTANT) ===== */}
       <div className="pointer-events-none absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#060b12] to-transparent z-10" />
@@ -44,14 +45,14 @@ export default function ProjectsSection() {
       {/* ===== HEADER ===== */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 mb-20 text-center">
         <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
-          My{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10B9B7] to-[#6CF2F0]">
-            Projects
+            <WordRotate
+            words={["Projects","Creations","Works"]}
+            className="font-doto text-6xl text-white"
+            />
           </span>
         </h2>
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          A collection of my work showcasing various technologies and solutions
-        </p>
+        
         <div className="mt-6 h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-[#10B9B7] to-transparent rounded-full" />
       </div>
 

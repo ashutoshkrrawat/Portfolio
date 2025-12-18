@@ -14,7 +14,7 @@ export const projects = [
     title: "MediBridge",
     description:
       "A solution built for managing the big queue in OPD's by using the AI voice command and online booking feature. Built in Martinovation, A hackathon by Usha Marting University",
-    image: "/projects/ecomint.png",
+    image: "/assets/MediBridge.png",
     tags: ["Nodejs", "MongoDB", "Express", "React", "Gemini Model"],
     live: "",
     github: "https://github.com/prana-W/MediBridge",

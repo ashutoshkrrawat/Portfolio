@@ -33,29 +33,20 @@ export default function ProjectsSection() {
       <div className="pointer-events-none absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-[#060b12] to-transparent z-10" />
 
       {/* ===== DOT BACKGROUND ===== */}
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage:
-            "radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px)",
-          backgroundSize: "22px 22px",
-        }}
-      />
+      
 
       {/* ===== HEADER ===== */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 mb-20 text-center">
         <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
-          My <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10B9B7] to-[#6CF2F0]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10B9B7] to-[#6CF2F0]">
             <WordRotate
               words={["Projects", "Creations", "Works"]}
-              className="font-doto text-6xl"
+              className="font-doto text-6xl text-white"
             />
           </span>
         </h2>
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Built using modern stacks, solving real-world needs.
-        </p>
-        <div className="mt-6 h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-[#10B9B7] to-transparent rounded-full" />
+        
+        <div className="mt-8 h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-[#10B9B7] to-transparent rounded-full" />
       </div>
 
       {/* ===== CONTENT ===== */}

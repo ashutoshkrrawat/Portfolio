@@ -29,103 +29,90 @@ export default function ProjectsSection() {
   return (
     <section className="relative py-24 overflow-hidden bg-transparent">
       
-      {/* ===== TOP BLEND (IMPORTANT) ===== */}
-      <div className="pointer-events-none absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#060b12] to-transparent z-10" />
+      {/* ===== TOP BLEND ===== */}
+      <div className="pointer-events-none absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-[#060b12] to-transparent z-10" />
 
-      {/* Subtle dotted background */}
+      {/* ===== DOT BACKGROUND ===== */}
       <div
         className="absolute inset-0 -z-10"
         style={{
           backgroundImage:
             "radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px)",
-          backgroundSize: "24px 24px",
+          backgroundSize: "22px 22px",
         }}
       />
 
       {/* ===== HEADER ===== */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 mb-20 text-center">
         <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10B9B7] to-[#6CF2F0]">
+          My <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10B9B7] to-[#6CF2F0]">
             <WordRotate
-            words={["Projects","Creations","Works"]}
-            className="font-doto text-6xl text-white"
+              words={["Projects", "Creations", "Works"]}
+              className="font-doto text-6xl"
             />
           </span>
         </h2>
-        
+        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          Built using modern stacks, solving real-world needs.
+        </p>
         <div className="mt-6 h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-[#10B9B7] to-transparent rounded-full" />
       </div>
 
-      {/* ===== CONTENT WRAPPER ===== */}
+      {/* ===== CONTENT ===== */}
       <div className="relative z-20 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-[260px_1fr] gap-10">
-          
-          {/* LEFT — FILTER */}
+
+        {/* ===== FILTER ABOVE PROJECTS ===== */}
+        <div className="mb-10 bg-[#0d1321]/40 border border-white/10 rounded-xl p-5">
           <TechFilter
             selectedTags={selectedTags}
             toggleTag={toggleTag}
             clearFilters={clearFilters}
           />
 
-          {/* RIGHT — PROJECTS */}
-          <div className="flex flex-col gap-6">
-            
-            {/* Result info */}
-            <div className="flex flex-wrap items-center justify-between gap-4">
-              <p className="text-sm text-gray-400">
-                Showing{" "}
-                <span className="text-white font-semibold">
-                  {filteredProjects.length}
-                </span>{" "}
-                projects
-              </p>
-
-              {selectedTags.length > 0 && (
-                <div className="flex flex-wrap gap-2">
-                  {selectedTags.map((tag) => (
-                    <Badge
-                      key={tag}
-                      className="bg-[#10B9B7]/10 text-[#10B9B7] border border-[#10B9B7]/30"
-                    >
-                      {tag}
-                      <button
-                        onClick={() => toggleTag(tag)}
-                        className="ml-2 hover:text-white"
-                      >
-                        <X className="h-3 w-3" />
-                      </button>
-                    </Badge>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Project Grid */}
-            {filteredProjects.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredProjects.map((project) => (
-                  <ProjectCard key={project.id} project={project} />
-                ))}
-              </div>
-            ) : (
-              <div className="flex flex-col items-center justify-center py-24 text-center">
-                <div className="text-5xl mb-4">🔍</div>
-                <h3 className="text-xl font-semibold text-white">
-                  No projects found
-                </h3>
-                <p className="text-gray-400 mt-2 mb-4">
-                  Try adjusting your filters
-                </p>
-                <button
-                  onClick={clearFilters}
-                  className="px-4 py-2 rounded-lg bg-[#10B9B7]/10 border border-[#10B9B7]/30 text-[#10B9B7] hover:bg-[#10B9B7]/20 transition"
+          {selectedTags.length > 0 && (
+            <div className="flex flex-wrap gap-2 mt-4">
+              {selectedTags.map((tag) => (
+                <Badge
+                  key={tag}
+                  className="bg-[#10B9B7]/10 text-[#10B9B7] border border-[#10B9B7]/30 "
                 >
-                  Clear Filters
-                </button>
-              </div>
-            )}
-          </div>
+                  {tag}
+                  <button
+                    onClick={() => toggleTag(tag)}
+                    className="ml-2 hover:text-white"
+                  >
+                    <X className="h-3 w-3" />
+                  </button>
+                </Badge>
+              ))}
+            </div>
+          )}
         </div>
+
+        {/* ===== PROJECT GRID ===== */}
+        {filteredProjects.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        ) : (
+          <div className="flex flex-col items-center justify-center py-24 text-center">
+            <div className="text-5xl mb-4">🔍</div>
+            <h3 className="text-xl font-semibold text-white">
+              No projects found
+            </h3>
+            <p className="text-gray-400 mt-2 mb-4">
+              Try adjusting your filters
+            </p>
+            <button
+              onClick={clearFilters}
+              className="px-4 py-2 rounded-lg bg-[#10B9B7]/10 border border-[#10B9B7]/30 text-[#10B9B7] hover:bg-[#10B9B7]/20 transition"
+            >
+              Clear Filters
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

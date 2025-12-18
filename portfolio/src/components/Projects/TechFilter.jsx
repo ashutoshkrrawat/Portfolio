@@ -8,20 +8,19 @@ const ALL_TAGS = [
   "Nextjs",
   "AI",
   "MongoDB",
-  "Prisma",
   "AuthJs",
   "Web3",
-  "Convex",
   "WebSockets",
   "Redis",
   "Express",
+  "React",
 ];
 
 export default function TechFilter({ selectedTags, toggleTag, clearFilters }) {
   return (
     <Card className="sticky top-28 bg-[#0d1321]/50 backdrop-blur-md border border-white/10">
       <CardContent className="p-6">
-        
+
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
@@ -41,6 +40,7 @@ export default function TechFilter({ selectedTags, toggleTag, clearFilters }) {
           )}
         </div>
 
+        {/* Count */}
         {selectedTags.length > 0 && (
           <Badge className="mb-4 bg-[#10B9B7]/20 text-[#10B9B7] border border-[#10B9B7]/30">
             {selectedTags.length} selected
@@ -49,11 +49,12 @@ export default function TechFilter({ selectedTags, toggleTag, clearFilters }) {
 
         <Separator className="mb-4 bg-white/10" />
 
-        <div className="space-y-3">
+        {/* HORIZONTAL FILTER BUTTONS 👇 */}
+        <div className="flex flex-wrap gap-6">
           {ALL_TAGS.map((tag) => (
             <label
               key={tag}
-              className="flex items-center gap-3 text-sm text-gray-300 cursor-pointer hover:text-white"
+              className="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white transition"
             >
               <Checkbox
                 checked={selectedTags.includes(tag)}
@@ -64,6 +65,7 @@ export default function TechFilter({ selectedTags, toggleTag, clearFilters }) {
             </label>
           ))}
         </div>
+
       </CardContent>
     </Card>
   );

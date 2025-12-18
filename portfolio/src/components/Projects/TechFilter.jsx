@@ -5,15 +5,13 @@ import { Separator } from "@/components/ui/separator";
 import { Filter, X } from "lucide-react";
 
 const ALL_TAGS = [
-  "Nextjs",
-  "AI",
+  "Nodejs",
+  "Gemini Model",
   "MongoDB",
-  "AuthJs",
-  "Web3",
-  "WebSockets",
-  "Redis",
   "Express",
   "React",
+  "Tailwind",
+  "NPM",
 ];
 
 export default function TechFilter({ selectedTags, toggleTag, clearFilters }) {
@@ -50,7 +48,7 @@ export default function TechFilter({ selectedTags, toggleTag, clearFilters }) {
         <Separator className="mb-4 bg-white/10" />
 
         {/* HORIZONTAL FILTER BUTTONS 👇 */}
-        <div className="flex flex-wrap gap-6">
+        <div className="flex flex-wrap gap-10 justify-center">
           {ALL_TAGS.map((tag) => (
             <label
               key={tag}

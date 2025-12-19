@@ -36,7 +36,7 @@ export default function TechStackPage() {
       className="relative pt-4 pb-32 overflow-hidden bg-transparent"
     >
       {/* ===== BLEND TOP WITH PREVIOUS SECTION ===== */}
-      <div className="pointer-events-none absolute -top-24 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#060b12] z-10" />
+      <div className="pointer-events-none absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-transparent to-transparent z-10" />
 
       
       {/* ===== PAGE HEADING ===== */}
@@ -45,7 +45,7 @@ export default function TechStackPage() {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
         }`}
       >
-        <h2 className="text-center text-4xl md:text-6xl font-bold text-white mb-6">
+        <h2 className="text-center text-4xl md:text-6xl font-bold text-white mb-6 mt-8">
           <WordRotate
             words={["Tech Stack", "Tools", "What I Use"]}
             className="text-white font-doto text-6xl"

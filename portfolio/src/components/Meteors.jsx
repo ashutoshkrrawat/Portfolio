@@ -2,7 +2,7 @@
 import React from "react";
 
 export function Meteors({ 
-  meteorCount = 10,      // how many meteors fall
+  meteorCount = 5,      // how many meteors fall
   starCount = 100,      // how many stars stay static
   intervalMs = 2000,    
   children 

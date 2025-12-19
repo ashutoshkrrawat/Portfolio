@@ -49,12 +49,30 @@ export default function PortfolioBento() {
   return (
     <section 
       id="skills-section"
-      className="relative py-20 overflow-hidden bg-gradient-to-br from-[#000000] via-[#0f1417] to-[#03070e]"
+      className="relative py-20 overflow-hidden bg-transparent"
     >
       {/* BLEND FROM PREVIOUS SECTION */}
-<div className="pointer-events-none absolute top-0 left-0 w-full h-40 bg-gradient-to-t from-transparent to-[#060b12] z-10" />
+{/* <div className="pointer-events-none absolute top-0 left-0 w-full h-40 bg-gradient-to-t from-transparent to-[#060b12] z-10" /> */}
 
-      
+      {/* SUBTLE GRID BACKGROUND */}
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: `
+            repeating-linear-gradient(
+              0deg,
+              rgba(255,255,255,0.05) 0 1px,
+              transparent 1px 100px
+            ),
+            repeating-linear-gradient(
+              90deg,
+              rgba(255,255,255,0.05) 0 1px,
+              transparent 1px 100px
+            )
+          `,
+          backgroundColor: "#000000",
+        }}
+      />
       
       {/* ================= SKILLS HEADING ================= */}
       <div className={`max-w-7xl mx-auto px-4 mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
@@ -223,7 +241,7 @@ export default function PortfolioBento() {
           66% { transform: translate(-10px, 10px); }
         }
       `}</style>
-      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-[#060b12]" />
+      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-transparent" />
 
     </section>
     

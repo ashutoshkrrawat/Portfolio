@@ -30,7 +30,7 @@ export default function ProjectsSection() {
     <section className="relative py-24 overflow-hidden bg-transparent">
       
       {/* ===== TOP BLEND ===== */}
-      <div className="pointer-events-none absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-[#060b12] to-transparent z-10" />
+      {/* <div className="pointer-events-none absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-[#060b12] to-transparent z-10" /> */}
 
       {/* ===== DOT BACKGROUND ===== */}
       
@@ -105,7 +105,7 @@ export default function ProjectsSection() {
           </div>
         )}
       </div>
-      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-[#060b12]" />
+      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-transparent" />
 
     </section>
   );

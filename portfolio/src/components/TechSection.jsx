@@ -3,20 +3,20 @@ import MagneticButton from "./MagneticButton";
 export default function TechSection({ title, techs, delay }) {
   return (
     <div 
-      className="flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-white/5 last:border-b-0"
+      className="flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-white/10 last:border-b-0"
       style={{
         animation: `fadeInUp 0.8s ease-out ${delay}s backwards`
       }}
     >
       {/* Left - Category Title */}
       <div className="md:w-1/4">
-        <h3 className="text-5xl md:text-6xl font-black text-white/10 uppercase tracking-tight">
+        <h3 className="text-5xl md:text-6xl font-black text-white/50 uppercase tracking-tight">
           {title}
         </h3>
       </div>
 
       {/* Right - Tech Items */}
-      <div className="md:w-3/4 flex flex-wrap gap-x-12 gap-y-8">
+      <div className="md:w-3/4 flex flex-wrap gap-x-12 gap-y-12">
         {techs.map((tech, index) => (
           <div
             key={tech.name}

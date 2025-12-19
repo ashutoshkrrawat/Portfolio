@@ -2,7 +2,7 @@ export const techStack = {
     frontend: [
         {
             name: "JavaScript",
-            icon: "src/logos/javascript.png", // Replace with your PNG path
+            icon: "src/logos/javascript.png",
             bgColor: "#F7DF1E",
             textColor: "#000"
         },
@@ -19,12 +19,6 @@ export const techStack = {
             textColor: "#000"
         },
         {
-            name: "Next.js",
-            icon: "src/logos/nextjs.png",
-            bgColor: "transparent",
-            textColor: "#fff"
-        },
-        {
             name: "Redux",
             icon: "src/logos/redux.png",
             bgColor: "#764ABC",
@@ -37,15 +31,15 @@ export const techStack = {
             textColor: "#fff"
         },
         {
-            name: "Framer Motion",
-            icon: "src/logos/framer.png",
-            bgColor: "#FF0055",
+            name: "Shadcn",
+            icon: "src/logos/shadcn.png",
+            bgColor: "#000000",
             textColor: "#fff"
         },
         {
-            name: "Sass",
-            icon: "src/logos/sass.png",
-            bgColor: "#CC6699",
+            name: "HTML",
+            icon: "src/logos/html5.png",
+            bgColor: "#E34F26",
             textColor: "#fff"
         },
     ],
@@ -63,12 +57,6 @@ export const techStack = {
             textColor: "#fff"
         },
         {
-            name: "NestJS",
-            icon: "src/logos/nestjs.png",
-            bgColor: "#E0234E",
-            textColor: "#fff"
-        },
-        {
             name: "Socket.io",
             icon: "src/logos/socketio.png",
             bgColor: "#010101",
@@ -80,24 +68,6 @@ export const techStack = {
             name: "MongoDB",
             icon: "src/logos/mongodb.png",
             bgColor: "#47A248",
-            textColor: "#fff"
-        },
-        {
-            name: "PostgreSQL",
-            icon: "src/logos/postgresql.png",
-            bgColor: "#4169E1",
-            textColor: "#fff"
-        },
-        {
-            name: "Redis",
-            icon: "src/logos/redis.png",
-            bgColor: "#DC382D",
-            textColor: "#fff"
-        },
-        {
-            name: "Prisma",
-            icon: "src/logos/prisma.png",
-            bgColor: "#2D3748",
             textColor: "#fff"
         },
     ],

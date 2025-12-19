@@ -8,6 +8,7 @@ import Particles from './components/Particles.jsx';
 import { MouseTrail } from './components/MouseTrail.jsx';
 import { DotBackground } from './components/DottedBackground.jsx';
 import TechStack from './sections/TechStack.jsx';
+import {  Meteors } from './components/Meteors.jsx';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -31,10 +32,14 @@ function App() {
       <About />
       <Skills className="bg-rgb(14, 16, 15)"/>
       <DotBackground>
-
       <Projects />
       </DotBackground>
-      <TechStack/>
+      <Meteors count={500}>
+      <TechStack />
+      </Meteors>
+
+      
+      
     </>
   )
 }

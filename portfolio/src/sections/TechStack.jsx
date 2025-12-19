@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import TechSection from "@/components/TechSection";
 import { techStack } from "@/data/TechStackData.js";
 import { WordRotate } from "@/components/WordRotate";
-
+import { Meteors } from "@/components/ui/meteors.jsx";
 export default function TechStackPage() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -33,50 +33,12 @@ export default function TechStackPage() {
   return (
     <section
       id="tech-stack-section"
-      className="relative pt-4 pb-32 overflow-hidden bg-gradient-to-b from-[#060b12] via-[#0a0f12] to-[#03070f]"
+      className="relative pt-4 pb-32 overflow-hidden bg-transparent"
     >
       {/* ===== BLEND TOP WITH PREVIOUS SECTION ===== */}
       <div className="pointer-events-none absolute -top-24 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#060b12] z-10" />
 
-      {/* ===== SUBTLE GRID BACKGROUND ===== */}
-      <div
-        className="absolute inset-0 -z-10 opacity-10"
-        style={{
-          backgroundImage: `
-            repeating-linear-gradient(
-              0deg,
-              rgba(255, 255, 255, 0.04) 0 1px,
-              transparent 1px 80px
-            ),
-            repeating-linear-gradient(
-              90deg,
-              rgba(255, 255, 255, 0.04) 0 1px,
-              transparent 1px 80px
-            )
-          `,
-        }}
-      />
-
-      {/* ===== PARTICLES ===== */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        {[...Array(60)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full bg-white/20"
-            style={{
-              width: Math.random() * 2 + 1 + "px",
-              height: Math.random() * 2 + 1 + "px",
-              left: Math.random() * 100 + "%",
-              top: Math.random() * 100 + "%",
-              animation: `floatSubtle ${
-                Math.random() * 18 + 12
-              }s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 6}s`,
-            }}
-          />
-        ))}
-      </div>
-
+      
       {/* ===== PAGE HEADING ===== */}
       <div
         className={`max-w-7xl mx-auto px-6 mb-20 transition-all duration-1000 ${

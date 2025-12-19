@@ -7,6 +7,7 @@ import Projects from './sections/Projects.jsx';
 import Particles from './components/Particles.jsx';
 import { MouseTrail } from './components/MouseTrail.jsx';
 import { DotBackground } from './components/DottedBackground.jsx';
+import TechStack from './sections/TechStack.jsx';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -33,6 +34,7 @@ function App() {
 
       <Projects />
       </DotBackground>
+      <TechStack/>
     </>
   )
 }

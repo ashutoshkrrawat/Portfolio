@@ -31,12 +31,11 @@ export default function About() {
   }, []);
 
   const skills = [
-    "React", "Tailwind CSS", "JavaScript", "TypeScript", 
-    "Node.js", "Next.js", "MongoDB", "Git"
+    "MERN", "Tailwind", "Git", "Github"
   ];
 
   const interests = [
-    "Web Development", "UI/UX Design", "Problem Solving", "Open Source"
+    "Web Development", "Problem Solving", "CP","Typing"
   ];
 
   return (
@@ -125,7 +124,7 @@ export default function About() {
               </p>
 
               <p className="text-white/80 text-lg leading-relaxed">
-                Currently pursuing my degree while building real-world projects, I'm 
+                Currently pursuing my degree from NIT Jamshedpur while building real-world projects, I'm 
                 constantly learning and pushing the boundaries of what's possible on the web. 
                 My focus is on writing clean, efficient code and crafting intuitive user interfaces.
               </p>

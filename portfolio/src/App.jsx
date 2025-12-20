@@ -9,13 +9,15 @@ import { MouseTrail } from './components/MouseTrail.jsx';
 import { DotBackground } from './components/DottedBackground.jsx';
 import TechStack from './sections/TechStack.jsx';
 import {  Meteors } from './components/Meteors.jsx';
+import Socials from './sections/Social.jsx';
+import { SparklesCore } from './components/ui/sparkles.jsx';
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
       <MouseTrail/>
-      <Particles
+      {/* <Particles
         className="fixed inset-0 -z-10"
         particleCount={200}
         particleSpread={15}
@@ -26,17 +28,27 @@ function App() {
         alphaParticles={true}
         particleBaseSize={250}
         sizeRandomness={1}
-        cameraDistance={40} />
+        cameraDistance={40} /> */}
+        <SparklesCore
+        className="fixed inset-0 -z-10 pointer-events-none"
+        background="#000000"
+        particleColor="#ffffff"
+        particleDensity={20}
+        speed={2}
+        minSize={1}
+        maxSize={1}
+      />
       <Navbar />
       <Hero />
       <About />
       <Skills className="bg-rgb(14, 16, 15)"/>
-      <DotBackground>
       <Projects />
+      <DotBackground>
       </DotBackground>
-      <Meteors count={500}>
       <TechStack />
+      <Meteors count={500}>
       </Meteors>
+      <Socials/>
 
       
       

@@ -46,13 +46,13 @@ export default function About() {
         min-h-screen
         py-24
         overflow-hidden
-        bg-[#060b12]
+        bg-transparent
         [mask-image:linear-gradient(to_bottom,transparent,black_20%)]
         [-webkit-mask-image:linear-gradient(to_bottom,transparent,black_20%)]
       "
     >
       {/* SUBTLE GRID BACKGROUND */}
-      <div
+      {/* <div
         className="absolute inset-0 -z-10"
         style={{
           backgroundImage: `
@@ -69,7 +69,7 @@ export default function About() {
           `,
           backgroundColor: "#000000",
         }}
-      />
+      /> */}
 
       {/* MINIMAL PARTICLES - Tiny dots */}
       {/* <div className="absolute inset-0 -z-10 overflow-hidden">

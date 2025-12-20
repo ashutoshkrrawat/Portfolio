@@ -41,7 +41,7 @@ export default function Socials() {
   ];
 
   return (
-    <section className="relative py-32 min-h-screen overflow-hidden bg-black">
+    <section className="relative py-32 min-h-screen overflow-hidden bg-transparent">
       
       {/* BLEND TOP */}
       <div className="absolute -top-24 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#060b12]" />

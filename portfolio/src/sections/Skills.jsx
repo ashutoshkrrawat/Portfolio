@@ -55,7 +55,7 @@ export default function PortfolioBento() {
 {/* <div className="pointer-events-none absolute top-0 left-0 w-full h-40 bg-gradient-to-t from-transparent to-[#060b12] z-10" /> */}
 
       {/* SUBTLE GRID BACKGROUND */}
-      <div
+      {/* <div
         className="absolute inset-0 -z-10"
         style={{
           backgroundImage: `
@@ -72,7 +72,7 @@ export default function PortfolioBento() {
           `,
           backgroundColor: "#000000",
         }}
-      />
+      /> */}
       
       {/* ================= SKILLS HEADING ================= */}
       <div className={`max-w-7xl mx-auto px-4 mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>

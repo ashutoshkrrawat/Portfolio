@@ -33,8 +33,8 @@ function App() {
         className="fixed inset-0 -z-10 pointer-events-none"
         background="#000000"
         particleColor="#ffffff"
-        particleDensity={20}
-        speed={2}
+        particleDensity={15}
+        speed={5}
         minSize={1}
         maxSize={1}
       />

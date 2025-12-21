@@ -20,21 +20,6 @@ const SERVICE_ID = "service_r5sopua";
 const TEMPLATE_ID = "template_ebjxtkn";
 const PUBLIC_KEY = "uFDj98cLlr4NUnQ4I";
 
-// Social media button
-const SocialButton = ({ icon: Icon, url, color, followerCount }) => {
-  return (
-    <a href={url} target="_blank" rel="noopener noreferrer">
-      <button className="social-btn" style={{ "--platform-color": color }}>
-        <span className="social-icon">
-          <Icon size={20} />
-        </span>
-        <span className="social-text1">Follow</span>
-        <span className="social-text2">{followerCount}</span>
-      </button>
-    </a>
-  );
-};
-
 export default function Socials() {
   const [formData, setFormData] = useState({
     from_name: "",
@@ -87,7 +72,10 @@ export default function Socials() {
               className="font-doto"
             />
           </h2>
+                  <div className="mt-8 h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-[#10B9B7] to-transparent rounded-full" />
+
         </div>
+        
         {/* SOCIAL BUTTONS */}
         <div className="flex flex-wrap justify-center gap-6 mb-20">
           

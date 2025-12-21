@@ -8,18 +8,23 @@ export default {
   theme: {
     extend: {
       animation: {
-    "meteor-shower": "meteorShower 1.6s linear infinite",
-  },
-  keyframes: {
-    meteorShower: {
-      "0%": { transform: "translate(0, 0)", opacity: "1" },
-      "80%": { opacity: "1" },
-      "100%": {
-        transform: "translate(-350px, 350px)",
-        opacity: "0",
+        meteor: "meteor 5s linear infinite",
       },
-    },
-  },
+      keyframes: {
+        meteor: {
+          "0%": {
+            transform: "rotate(215deg) translateX(0)",
+            opacity: "1",
+          },
+          "70%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
+      },
       fontFamily: {
         sans: [
           "ui-sans-serif",

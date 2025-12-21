@@ -43,6 +43,9 @@
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
   }
+  .theme {
+    --animate-meteor: meteor 5s linear infinite;
+  }
 }
 @layer utilities {
   .font-doto-rounded {
@@ -81,3 +84,28 @@
 body{
   cursor: none;
 }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* @theme inline {
+  @keyframes meteor {
+  0% {
+    transform: rotate(var(--angle)) translateX(0);
+    opacity: 1;
+    }
+  70% {
+    opacity: 1;
+    }
+  100% {
+    transform: rotate(var(--angle)) translateX(-500px);
+    opacity: 0;
+    }
+  }
+} */

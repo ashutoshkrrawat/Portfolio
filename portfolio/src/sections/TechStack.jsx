@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import TechSection from "@/components/TechSection";
 import { techStack } from "@/data/TechStackData.js";
 import { WordRotate } from "@/components/WordRotate";
-import { Meteors } from "@/components/ui/meteors.jsx";
+// import { Meteors } from "@/components/ui/meteors.jsx";
 export default function TechStackPage() {
   const [isVisible, setIsVisible] = useState(false);
 

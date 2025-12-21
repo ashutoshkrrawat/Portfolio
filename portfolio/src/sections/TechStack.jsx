@@ -18,7 +18,7 @@ export default function TechStackPage() {
       { threshold: 0.1 }
     );
 
-    const section = document.getElementById("tech-stack-section");
+    const section = document.getElementById("techstack");
     if (section) {
       observer.observe(section);
     }
@@ -32,7 +32,7 @@ export default function TechStackPage() {
 
   return (
     <section
-      id="tech-stack-section"
+      id="techstack"
       className="relative pt-4 pb-32 overflow-hidden bg-transparent"
     >
       {/* ===== BLEND TOP WITH PREVIOUS SECTION ===== */}

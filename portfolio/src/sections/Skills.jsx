@@ -34,7 +34,7 @@ export default function PortfolioBento() {
       { threshold: 0.1 }
     );
 
-    const section = document.getElementById('skills-section');
+    const section = document.getElementById('skills');
     if (section) {
       observer.observe(section);
     }
@@ -48,7 +48,7 @@ export default function PortfolioBento() {
 
   return (
     <section 
-      id="skills-section"
+      id="skills"
       className="relative py-20 overflow-hidden bg-transparent"
     >
       {/* BLEND FROM PREVIOUS SECTION */}

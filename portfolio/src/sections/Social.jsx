@@ -14,6 +14,7 @@ import LinkedinButton from "@/components/LinkedinBtn";
 import GithubButton from "@/components/GithubBtn";
 import InstagramButton from "@/components/InstagramBtn";
 import TwitterButton from "@/components/TwitterBtn";
+import BackToTopButton from "@/components/BackToTop";
 
 // REQUIRED EmailJS KEYS
 const SERVICE_ID = "service_r5sopua";
@@ -205,6 +206,10 @@ export default function Socials() {
           background-color: var(--platform-color);
         }
       `}</style>
+      <div className="flex justify-center mt-14">
+
+      <BackToTopButton/>
+      </div>
     </section>
   );
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from './sections/Navbar.jsx';
 import Hero from './sections/Hero.jsx';
 import About from './sections/About.jsx';
@@ -12,11 +12,18 @@ import TechStack from './sections/TechStack.jsx';
 import Socials from './sections/Social.jsx';
 import { SparklesCore } from './components/ui/sparkles.jsx';
 import { Toaster } from "@/components/ui/sonner"
+import { initLenis } from "@/lib/lenis";
 
 
 function App() {
-  const [count, setCount] = useState(0)
+   useEffect(() => {
+    const lenis = initLenis();
 
+    return () => {
+      // Cleanup if needed later
+      lenis.destroy();
+    };
+  }, []);
   return (
     <>
       <MouseTrail/>

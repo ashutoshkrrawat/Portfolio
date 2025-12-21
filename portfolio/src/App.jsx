@@ -11,6 +11,8 @@ import { DotBackground } from './components/DottedBackground.jsx';
 import TechStack from './sections/TechStack.jsx';
 import Socials from './sections/Social.jsx';
 import { SparklesCore } from './components/ui/sparkles.jsx';
+import { Toaster } from "@/components/ui/sonner"
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -53,6 +55,8 @@ function App() {
         <TechStack />
         <Socials/>
       </div>
+      <Toaster position="top-right" />
+
     </>
   )
 }

@@ -6,10 +6,10 @@ import {
   Mail,
   Instagram,
   Send,
-  CheckCircle,
-  AlertCircle,
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import { WordRotate } from "@/components/WordRotate";
+import { toast } from "sonner";
 
 // REQUIRED EmailJS KEYS
 const SERVICE_ID = "service_r5sopua";
@@ -38,7 +38,6 @@ export default function Socials() {
     message: "",
   });
 
-  const [status, setStatus] = useState({ type: "", message: "" });
   const [loading, setLoading] = useState(false);
 
   const socials = [
@@ -76,7 +75,6 @@ export default function Socials() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setStatus({ type: "", message: "" });
 
     try {
       await emailjs.send(
@@ -86,16 +84,18 @@ export default function Socials() {
         PUBLIC_KEY
       );
 
-      setStatus({
-        type: "success",
-        message: "Message sent successfully!",
+      // Success toast
+      toast.success("Message sent successfully!", {
+        description: "I'll get back to you as soon as possible.",
+        duration: 5000,
       });
 
       setFormData({ from_name: "", from_email: "", message: "" });
     } catch (error) {
-      setStatus({
-        type: "error",
-        message: "Failed to send message. Try again later.",
+      // Error toast
+      toast.error("Failed to send message", {
+        description: "Please try again or email me directly at ashutosh.kumarofficial@gmail.com",
+        duration: 5000,
       });
     } finally {
       setLoading(false);
@@ -103,10 +103,15 @@ export default function Socials() {
   };
 
   return (
-    <section className="relative py-32 min-h-screen overflow-hidden bg-transparent">
+    <section className="relative min-h-screen overflow-hidden bg-transparent">
       <div className="max-w-5xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-6xl font-bold text-white mb-4">Get in Touch</h2>
+          <h2 className="text-6xl font-bold text-white mb-4">
+            <WordRotate
+              words={["Get In Touch", "Contact Me"]}
+              className="font-doto"
+            />
+          </h2>
         </div>
 
         {/* SOCIAL BUTTONS */}
@@ -126,7 +131,7 @@ export default function Socials() {
         <div className="max-w-lg mx-auto bg-[#0d1321]/40 backdrop-blur-xl p-8 rounded-2xl border border-white/10">
           <h3 className="text-white text-xl font-semibold mb-6">Send a Message</h3>
 
-          <form className="space-y-4" onSubmit={handleSubmit}>
+          <div className="space-y-4">
             {/* name */}
             <input
               type="text"
@@ -136,7 +141,7 @@ export default function Socials() {
               onChange={(e) =>
                 setFormData({ ...formData, from_name: e.target.value })
               }
-              className="w-full px-4 py-3 bg-white/5 text-white rounded-lg"
+              className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white rounded-lg placeholder-gray-500 focus:border-teal-500/50 focus:outline-none transition-all"
               required
             />
 
@@ -149,7 +154,7 @@ export default function Socials() {
               onChange={(e) =>
                 setFormData({ ...formData, from_email: e.target.value })
               }
-              className="w-full px-4 py-3 bg-white/5 text-white rounded-lg"
+              className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white rounded-lg placeholder-gray-500 focus:border-teal-500/50 focus:outline-none transition-all"
               required
             />
 
@@ -162,28 +167,28 @@ export default function Socials() {
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })
               }
-              className="w-full px-4 py-3 bg-white/5 text-white rounded-lg"
+              className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white rounded-lg placeholder-gray-500 focus:border-teal-500/50 focus:outline-none transition-all resize-none"
+              required
             />
 
             <button
-              type="submit"
+              onClick={handleSubmit}
               disabled={loading}
-              className="w-full px-6 py-3 rounded-lg bg-teal-500 text-white font-medium hover:bg-teal-400 transition flex justify-center items-center gap-2"
+              className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-medium hover:shadow-lg hover:shadow-teal-500/50 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center gap-2"
             >
-              {loading ? "Sending..." : <><Send size={18} /> Send Message</>}
+              {loading ? (
+                <>
+                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  Sending...
+                </>
+              ) : (
+                <>
+                  <Send size={18} />
+                  Send Message
+                </>
+              )}
             </button>
-          </form>
-
-          {/* message */}
-          {status.message && (
-            <p
-              className={`mt-4 text-sm text-center ${
-                status.type === "success" ? "text-green-400" : "text-red-400"
-              }`}
-            >
-              {status.message}
-            </p>
-          )}
+          </div>
         </div>
       </div>
 
@@ -198,15 +203,26 @@ export default function Socials() {
           position: relative;
           overflow: hidden;
           cursor: pointer;
+          transition: transform 0.2s;
+        }
+        .social-btn:active {
+          transform: scale(1.03);
+        }
+        .social-text1 {
+          font-size: 15px;
+          font-weight: 600;
+          margin-left: 25%;
+          color: #333;
         }
         .social-icon {
           position: absolute;
           top: 8px;
           left: 8px;
           color: var(--platform-color);
+          transition: transform 0.5s;
         }
         .social-btn:hover .social-icon {
-          transform: translateX(100px);
+          transform: translateX(104px);
         }
         .social-text2 {
           position: absolute;
@@ -218,6 +234,17 @@ export default function Socials() {
         }
         .social-btn:hover .social-text2 {
           transform: translateX(110px);
+        }
+        .social-icon::before {
+          position: absolute;
+          left: -100px;
+          top: -8px;
+          z-index: -1;
+          content: '';
+          width: 140px;
+          height: 40px;
+          border-radius: 30px;
+          background-color: var(--platform-color);
         }
       `}</style>
     </section>

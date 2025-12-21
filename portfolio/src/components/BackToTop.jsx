@@ -50,23 +50,12 @@ const StyledWrapper = styled.div`
     transition: all 0.5s;
     transform: scale(0);
   }
-  .svg {
-    transition: all 0.5s;
-  }
+  
   .button:hover {
     transform: translateY(-3px);
     background-color: #0c0c0c;
   }
-  .button:hover .svg {
-    fill: white;
-    transform: scale(1.2);
-  }
-  .button:hover::after {
-    transform: scale(1);
-  }
-  .button:active {
-    transform: translateY(2px);
-  }
+  
 `;
 
 export default BackToTopButton;

@@ -27,7 +27,7 @@ export default function ProjectsSection() {
         );
 
   return (
-    <section className="relative py-24 overflow-hidden bg-transparent">
+    <section id="project" className="relative py-24 overflow-hidden bg-transparent">
       
       {/* ===== TOP BLEND ===== */}
       {/* <div className="pointer-events-none absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-[#060b12] to-transparent z-10" /> */}

@@ -1,5 +1,5 @@
 // src/sections/Hero.jsx
-import profilePic from "../assets/profilePic.jpg"; // or .png if you have transparent bg
+import profilePic from "../assets/anshimg7.png"; // or .png if you have transparent bg
 import AnimatedScrollArrow from "../components/MotionSlideArrow";
 import Button from "../components/ModernButton";
 import { WordRotate } from "../components/WordRotate";

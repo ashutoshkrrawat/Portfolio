@@ -64,7 +64,7 @@ export default function Socials() {
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-transparent">
+    <section id="contact" className="relative min-h-screen overflow-hidden bg-transparent">
       <div className="max-w-5xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-6xl font-bold text-white mb-4">
@@ -206,7 +206,7 @@ export default function Socials() {
           background-color: var(--platform-color);
         }
       `}</style>
-      <div className="flex justify-center mt-14">
+      <div className="flex justify-center mt-14 md-8">
 
       <BackToTopButton/>
       </div>

@@ -10,6 +10,10 @@ import {
 import emailjs from "@emailjs/browser";
 import { WordRotate } from "@/components/WordRotate";
 import { toast } from "sonner";
+import LinkedinButton from "@/components/LinkedinBtn";
+import GithubButton from "@/components/GithubBtn";
+import InstagramButton from "@/components/InstagramBtn";
+import TwitterButton from "@/components/TwitterBtn";
 
 // REQUIRED EmailJS KEYS
 const SERVICE_ID = "service_r5sopua";
@@ -113,18 +117,13 @@ export default function Socials() {
             />
           </h2>
         </div>
-
         {/* SOCIAL BUTTONS */}
-        <div className="flex flex-wrap justify-center gap-4 mb-20">
-          {socials.map((social) => (
-            <SocialButton
-              key={social.name}
-              icon={social.icon}
-              url={social.url}
-              color={social.color}
-              followerCount={social.followers}
-            />
-          ))}
+        <div className="flex flex-wrap justify-center gap-6 mb-20">
+          
+          <LinkedinButton/>
+          <GithubButton/>
+          <InstagramButton/>
+          <TwitterButton/>
         </div>
 
         {/* FORM */}

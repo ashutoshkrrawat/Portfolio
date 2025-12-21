@@ -1,0 +1,76 @@
+import React from 'react';
+import styled from 'styled-components';
+
+const InstagramButton = () => {
+  return (
+    <StyledWrapper>
+      <button> 
+        <span className="icon"><svg height={33} viewBox="0 0 128 128" width={33} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"><linearGradient id="a" gradientTransform="matrix(1 0 0 -1 594 633)" gradientUnits="userSpaceOnUse" x1="-566.711" x2="-493.288" y1="516.569" y2="621.43"><stop offset={0} stopColor="#ffb900" /><stop offset={1} stopColor="#9100eb" /></linearGradient><circle cx={64} cy={64} fill="url(#a)" r={64} /><g fill="#fff"><path d="m82.333 104h-36.666c-11.947 0-21.667-9.719-21.667-21.667v-36.666c0-11.948 9.72-21.667 21.667-21.667h36.666c11.948 0 21.667 9.719 21.667 21.667v36.667c0 11.947-9.719 21.666-21.667 21.666zm-36.666-73.333c-8.271 0-15 6.729-15 15v36.667c0 8.271 6.729 15 15 15h36.666c8.271 0 15-6.729 15-15v-36.667c0-8.271-6.729-15-15-15z" /><path d="m64 84c-11.028 0-20-8.973-20-20 0-11.029 8.972-20 20-20s20 8.971 20 20c0 11.027-8.972 20-20 20zm0-33.333c-7.352 0-13.333 5.981-13.333 13.333 0 7.353 5.981 13.333 13.333 13.333s13.333-5.98 13.333-13.333c0-7.352-5.98-13.333-13.333-13.333z" /><circle cx="85.25" cy="42.75" r="4.583" /></g></svg></span>
+        <span className="text1">Follow me</span>
+        <span className="text2">1,2k</span> 
+      </button>
+    </StyledWrapper>
+  );
+}
+
+const StyledWrapper = styled.div`
+  button {
+    position: relative;
+    width: 130px;
+    height: 35px;
+    border-radius: 30px;
+    background-color: white;
+    border: 1px #FFB700 solid;
+    overflow: hidden;
+  }
+
+  .text1 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 22%;
+  }
+
+  .text2 {
+    position: absolute;
+    top: 25%;
+    left: -50px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+  }
+
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s;
+  }
+
+  .icon::before {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    z-index: -1;
+    content: '';
+    width: 130px;
+    height: 33px;
+    border-radius: 30px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    ;
+  }
+
+  button:hover .icon {
+    transform: translateX(96px);
+    transition: transform 0.5s;
+  }
+
+  button:hover .text2 {
+    transform: translateX(100px);
+    transition: transform 0.6s;
+  }
+
+  button:active {
+    transform: scale(1.03);
+  }`;
+
+export default InstagramButton;

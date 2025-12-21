@@ -44,36 +44,7 @@ export default function Socials() {
 
   const [loading, setLoading] = useState(false);
 
-  const socials = [
-    {
-      name: "GitHub",
-      icon: Github,
-      url: "https://github.com/ashutoshkrrawat",
-      color: "#333333",
-      followers: "1.2k",
-    },
-    {
-      name: "LinkedIn",
-      icon: Linkedin,
-      url: "https://linkedin.com/in/ashutosh",
-      color: "#2867b2",
-      followers: "2.5k",
-    },
-    {
-      name: "Instagram",
-      icon: Instagram,
-      url: "https://instagram.com/ashutosh",
-      color: "#E4405F",
-      followers: "890",
-    },
-    {
-      name: "Twitter",
-      icon: Twitter,
-      url: "https://twitter.com/ashutosh",
-      color: "#1DA1F2",
-      followers: "1.8k",
-    },
-  ];
+  
 
   // FORM SUBMIT FUNCTION
   const handleSubmit = async (e) => {

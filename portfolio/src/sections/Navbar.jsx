@@ -1,4 +1,3 @@
-// src/sections/Navbar.jsx
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import {
@@ -6,13 +5,14 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import profilePic from "../assets/profilePic.jpg";
+import profilePic from "../assets/linkedinprofile.jpeg";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -23,10 +23,11 @@ export default function Navbar() {
     { name: "Contact", href: "#contact" },
   ];
 
-  // Hide nav on scroll down – show on scroll up
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+
+      setScrolled(currentScrollY > 20);
 
       if (currentScrollY < 10) {
         setIsVisible(true);
@@ -43,10 +44,9 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // Track active section
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + 120;
 
       navItems.forEach((item) => {
         const section = document.querySelector(item.href);
@@ -72,23 +72,17 @@ export default function Navbar() {
       className={`
         fixed top-0 left-0 right-0
         z-50
-        transition-transform duration-300
+        transition-all duration-300
         ${isVisible ? "translate-y-0" : "-translate-y-full"}
+        ${scrolled 
+          ? "bg-black/60 backdrop-blur-xl border-b border-white/10 shadow-lg" 
+          : "bg-transparent"
+        }
       `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          className="
-            mt-4
-            bg-black/40 backdrop-blur-xl
-            border border-white/10
-            rounded-2xl
-            px-6 py-4
-            flex items-center justify-between
-            shadow-lg
-          "
-        >
-          {/* LEFT SIDE */}
+        <div className="flex items-center justify-between h-16">
+
           <div className="flex items-center gap-3">
             <img
               src={profilePic}
@@ -106,7 +100,6 @@ export default function Navbar() {
             </span>
           </div>
 
-          {/* DESKTOP NAVIGATION */}
           <ul className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <li key={item.name}>
@@ -128,6 +121,7 @@ export default function Navbar() {
                   `}
                 >
                   {item.name}
+
                   {activeSection === item.name.toLowerCase() && (
                     <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-teal-500" />
                   )}
@@ -136,7 +130,6 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* MOBILE NAV MENU */}
           <div className="md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>

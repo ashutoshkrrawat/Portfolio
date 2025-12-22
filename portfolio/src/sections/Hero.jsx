@@ -1,9 +1,9 @@
 // src/sections/Hero.jsx
-import profilePic from "../assets/anshimg7.png"; // or .png if you have transparent bg
 import AnimatedScrollArrow from "../components/MotionSlideArrow";
 import Button from "../components/ModernButton";
 import { WordRotate } from "../components/WordRotate";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import DownloadBtn from "../components/DownloadBtn";
 
 export default function Hero() {
     return (
@@ -11,6 +11,7 @@ export default function Hero() {
             <section
                 id="home"
                 className="
+        relative
         min-h-screen
         flex items-center
         px-6 md:px-12
@@ -45,22 +46,20 @@ export default function Hero() {
 
                 </span>
 
-                <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12 mt-20">
-                    {/* ---------- LEFT : Text ---------- */}
-                    <div className="w-full md:w-1/2">
-                        {/* intro */}
+                <div className="max-w-6xl mx-auto w-full flex flex-col items-center text-center gap-12 mt-24 relative">
+                    
+
+                    {/* text + CTA */}
+                    <div className="max-w-3xl">
                         <p className="text-lg md:text-xl text-white/70 mb-6">
                             Hi, I am <span className="font-semibold text-white text-lg font-bold">ASHUTOSH</span> <br />
                             Welcome to my <span className="font-outfit font-[700] text-white">portfolio</span>
                         </p>
 
-                        {/* big title */}
-                        <div className="mb-8">
+                        <div className="mb-6 flex justify-center gap-8 items-center">
                             <h1 className="text-4xl md:text-7xl font-semibold text-white leading-none">
-
                                 Web
-                            </h1>
-
+                            </h1> 
                             <h2
                                 className="
         text-4xl md:text-7xl
@@ -74,73 +73,42 @@ export default function Hero() {
                             </h2>
                         </div>
 
-                        {/* description */}
-                        <p className="max-w-md text-base md:text-lg text-white/60">
+                        <p className="max-w-2xl mx-auto text-base md:text-lg text-white/70">
                             I build smooth and animated web experiences using React and modern UI.
                         </p>
-                        <div className="mt-8 mr-20">
+
+                        <div className="mt-8 flex justify-center items-center gap-20 translate-x-2">
                             <Button />
-
+                            <DownloadBtn />
                         </div>
-
-                        <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-                            <AnimatedScrollArrow />
-                        </div>
-
-
-                    </div>
-                    <div className="mt-8">
-
-
                     </div>
 
-
-
-
-                    {/* ---------- RIGHT : Tilted frame + popping face ---------- */}
-                    <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-                        <div className="relative w-64 h-64 md:w-72 md:h-72 flex items-center justify-center">
-                            {/* glow behind frame */}
+                    {/* highlight cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                        {[
+                            { label: "Projects Delivered", value: "4+", detail: "React / Node" },
+                            { label: "Open to", value: "Freelance & Collaborations", detail: "Remote-friendly" },
+                        ].map((item) => (
                             <div
-                                className="
-                absolute
-                w-52 h-64
-                rounded-2xl
-                bg-[#10B9B7]/35
-                blur-3xl
-                rotate-12
-              "
-                            />
-
-                            {/* tilted frame */}
-                            <div
-                                className="
-                relative
-                w-52 h-64
-                border border-[#ffffff80]
-                rounded-2xl
-                rotate-12
-                bg-transparent
-              "
-                            />
-
-                            {/* face popping out of the frame */}
-                            <img
-                                src={profilePic}
-                                alt="Ashutosh"
-                                className="
-                absolute
-                w-40 md:w-44
-                -top-8
-                right-6
-                translate-x-4
-                object-cover
-                drop-shadow-[0_0_25px_rgba(16,185,183,0.75)]
-              "
-                            />
-                        </div>
+                                key={item.label}
+                                className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 text-left shadow-[0_18px_60px_rgba(0,0,0,0.35)]"
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/0" />
+                                <div className="relative">
+                                    <p className="text-sm uppercase tracking-[0.15em] text-white/50 mb-2">
+                                        {item.label}
+                                    </p>
+                                    <p className="text-3xl font-semibold text-white mb-1">{item.value}</p>
+                                    <p className="text-white/60 text-sm">{item.detail}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
+
                 </div>
+                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
+                        <AnimatedScrollArrow />
+                    </div>
             </section >
         </>
     );

@@ -37,7 +37,7 @@ function ContributionTrend() {
           <Line
             type="monotone"
             dataKey="value"
-            stroke="#5eead4"
+            stroke="hsl(var(--color-primary-lighter))"
             strokeWidth={2}
             dot={{ r: 3 }}
           />

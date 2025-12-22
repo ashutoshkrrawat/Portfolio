@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-export default function MagneticButton({ tech }) {
+export default function MagneticButton({ tech, accent }) {
   const buttonRef = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -30,40 +30,50 @@ export default function MagneticButton({ tech }) {
     setPosition({ x: 0, y: 0 });
   };
 
+  const accentColor = accent || 'hsl(var(--color-primary))';
+  const uniqueId = `magnetic-btn-${tech.name.replace(/\s+/g, '-')}`;
+
   return (
-    <div
-      ref={buttonRef}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      className="inline-block"
-    >
+    <>
+      <style>{`
+        .${uniqueId}.group:hover .tech-name {
+          color: ${accentColor} !important;
+        }
+      `}</style>
       <div
-        className="flex items-center gap-3 cursor-pointer group"
-        style={{
-          transform: `translate(${position.x}px, ${position.y}px)`,
-          transition: position.x === 0 ? 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)' : 'none',
-        }}
+        ref={buttonRef}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        className="inline-block"
       >
-        {/* Icon */}
-        <div 
-          className="w-12 h-12 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 p-2"
-          style={{ 
-            backgroundColor: tech.bgColor,
+        <div
+          className={`flex items-center gap-3 cursor-pointer group ${uniqueId}`}
+          style={{
+            transform: `translate(${position.x}px, ${position.y}px)`,
+            transition: position.x === 0 ? 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)' : 'none',
           }}
         >
-          <img 
-            src={tech.icon} 
-            alt={tech.name}
-            className="w-full h-full object-contain"
-            style={{ filter: tech.textColor === '#fff' ? 'brightness(0) invert(1)' : 'none' }}
-          />
+          {/* Icon */}
+          <div 
+            className="w-12 h-12 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 p-2"
+            style={{ 
+              backgroundColor: tech.bgColor,
+            }}
+          >
+            <img 
+              src={tech.icon} 
+              alt={tech.name}
+              className="w-full h-full object-contain"
+              style={{ filter: tech.textColor === '#fff' ? 'brightness(0) invert(1)' : 'none' }}
+            />
+          </div>
+          
+          {/* Name */}
+          <span className="text-white text-lg font-medium transition-colors duration-300 tech-name">
+            {tech.name}
+          </span>
         </div>
-        
-        {/* Name */}
-        <span className="text-white text-lg font-medium group-hover:text-[#10B9B7] transition-colors duration-300">
-          {tech.name}
-        </span>
       </div>
-    </div>
+    </>
   );
 }

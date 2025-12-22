@@ -4,13 +4,11 @@ import Hero from './sections/Hero.jsx';
 import About from './sections/About.jsx';
 import Skills from './sections/Skills.jsx';
 import Projects from './sections/Projects.jsx';
-import { Meteors } from "@/components/ui/meteors"
 import { Particles } from "@/components/ui/particles"
 import { MouseTrail } from './components/MouseTrail.jsx';
 import { DotBackground } from './components/DottedBackground.jsx';
 import TechStack from './sections/TechStack.jsx';
 import Socials from './sections/Social.jsx';
-import { SparklesCore } from './components/ui/sparkles.jsx';
 import { Toaster } from "@/components/ui/sonner"
 import { initLenis } from "@/lib/lenis";
 

@@ -5,29 +5,29 @@ import { Github, ExternalLink, ImageOff } from "lucide-react";
 
 export default function ProjectCard({ project }) {
   return (
-    <Card className="group bg-[#0d1321]/30 backdrop-blur-sm border-white/10 hover:border-[#10B9B7]/40 transition-all duration-500 hover:shadow-xl hover:shadow-[#10B9B7]/10 overflow-hidden flex flex-col h-full">
+    <Card className="group bg-theme-bg-primary/30 backdrop-blur-sm border-white/10 hover:border-theme-primary/40 transition-all duration-500 hover:shadow-xl hover:shadow-theme-primary/10 overflow-hidden flex flex-col h-full">
       
       {/* ========== IMAGE (only if exists) ========== */}
       {project.image ? (
-        <div className="relative h-48 overflow-hidden bg-gradient-to-br from-[#10B9B7]/10 to-[#6CF2F0]/5">
+        <div className="relative h-48 overflow-hidden bg-gradient-to-br from-theme-primary/10 to-theme-primary-light/5">
           <img
             src={project.image}
             alt={project.title}
             className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
           />
           {/* Overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0d1321] via-transparent to-transparent opacity-60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-theme-bg-primary via-transparent to-transparent opacity-60" />
         </div>
       ) : (
         /* Placeholder when no image */
-        <div className="relative h-48 bg-gradient-to-br from-[#10B9B7]/5 to-[#6CF2F0]/5 flex items-center justify-center border-b border-white/10">
+        <div className="relative h-48 bg-gradient-to-br from-theme-primary/5 to-theme-primary-light/5 flex items-center justify-center border-b border-white/10">
           <ImageOff className="h-12 w-12 text-white/10" />
         </div>
       )}
 
       {/* ========== CONTENT ========== */}
       <CardHeader className="pb-3">
-        <CardTitle className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#10B9B7] group-hover:to-[#6CF2F0] transition-all duration-300">
+        <CardTitle className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-theme-primary group-hover:to-theme-primary-light transition-all duration-300">
           {project.title}
         </CardTitle>
         <CardDescription className="text-sm text-gray-400 line-clamp-3 leading-relaxed">
@@ -42,7 +42,7 @@ export default function ProjectCard({ project }) {
             <Badge
               key={tag}
               variant="secondary"
-              className="bg-white/5 text-gray-300 border border-white/10 hover:bg-white/10 hover:border-[#10B9B7]/30 transition-all duration-300 text-xs"
+              className="bg-white/5 text-gray-300 border border-white/10 hover:bg-white/10 hover:border-theme-primary/30 transition-all duration-300 text-xs"
               style={{
                 animation: `fadeInUp 0.5s ease-out ${index * 0.05}s backwards`
               }}
@@ -79,7 +79,7 @@ export default function ProjectCard({ project }) {
             <Button
               asChild
               size="sm"
-              className="flex-1 bg-[#10B9B7]/10 border border-[#10B9B7]/30 text-[#10B9B7] hover:bg-[#10B9B7]/20 hover:border-[#10B9B7]/50 transition-all duration-300"
+              className="flex-1 bg-theme-primary/10 border border-theme-primary/30 text-theme-primary hover:bg-theme-primary/20 hover:border-theme-primary/50 transition-all duration-300"
             >
               <a
                 href={project.live}

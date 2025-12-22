@@ -16,13 +16,13 @@ const ALL_TAGS = [
 
 export default function TechFilter({ selectedTags, toggleTag, clearFilters }) {
   return (
-    <Card className="sticky top-28 bg-[#0d1321]/50 backdrop-blur-md border border-white/10">
+    <Card className="sticky top-28 bg-theme-bg-primary/50 backdrop-blur-md border border-white/10">
       <CardContent className="p-6">
 
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
-            <Filter className="h-5 w-5 text-[#10B9B7]" />
+            <Filter className="h-5 w-5 text-theme-primary" />
             <h3 className="text-lg font-semibold text-white">
               Filter by Tech
             </h3>
@@ -40,7 +40,7 @@ export default function TechFilter({ selectedTags, toggleTag, clearFilters }) {
 
         {/* Count */}
         {selectedTags.length > 0 && (
-          <Badge className="mb-4 bg-[#10B9B7]/20 text-[#10B9B7] border border-[#10B9B7]/30">
+          <Badge className="mb-4 bg-theme-primary/20 text-theme-primary border border-theme-primary/30">
             {selectedTags.length} selected
           </Badge>
         )}
@@ -57,7 +57,7 @@ export default function TechFilter({ selectedTags, toggleTag, clearFilters }) {
               <Checkbox
                 checked={selectedTags.includes(tag)}
                 onCheckedChange={() => toggleTag(tag)}
-                className="border-white/20 data-[state=checked]:bg-[#10B9B7]"
+                className="border-white/20 data-[state=checked]:bg-theme-primary"
               />
               {tag}
             </label>

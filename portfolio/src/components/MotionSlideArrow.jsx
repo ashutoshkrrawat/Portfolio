@@ -34,7 +34,7 @@ export default function AnimatedScrollArrow() {
               opacity: 0,
               animation: 'fillArrow 1s ease-out 1.2s forwards',
               transformOrigin: '40px 23px',
-              filter: 'drop-shadow(0 0 8px rgba(16, 185, 183, 0.6))'
+              filter: 'drop-shadow(0 0 8px hsl(var(--color-primary) / 0.6))'
             }}
           />
 
@@ -50,15 +50,15 @@ export default function AnimatedScrollArrow() {
               strokeDasharray: 100,
               strokeDashoffset: 100,
               animation: 'drawBorder 1.2s ease-out forwards',
-              filter: 'drop-shadow(0 0 6px rgba(16, 185, 183, 0.8))'
+              filter: 'drop-shadow(0 0 6px hsl(var(--color-primary) / 0.8))'
             }}
           />
 
           {/* Gradient definitions */}
           <defs>
             <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#10B9B7" />
-              <stop offset="100%" stopColor="#6CF2F0" />
+              <stop offset="0%" stopColor="hsl(var(--color-primary))" />
+              <stop offset="100%" stopColor="hsl(var(--color-primary-light))" />
             </linearGradient>
           </defs>
         </svg>

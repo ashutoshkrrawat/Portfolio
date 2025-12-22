@@ -53,7 +53,7 @@ export default function TechStackPage() {
           
         </h2>
 
-        <div className="mt-6 h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-[#10B9B7] to-transparent rounded-full" />
+        <div className="mt-6 h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-theme-primary to-transparent rounded-full" />
       </div>
 
       {/* ===== CONTENT ===== */}
@@ -66,28 +66,28 @@ export default function TechStackPage() {
           title="Frontend"
           techs={techStack.frontend}
           delay={0.2}
-          accent="#6CF2F0"
+          accent="hsl(var(--color-primary-lighter))"
         />
 
         <TechSection
           title="Backend"
           techs={techStack.backend}
           delay={0.3}
-          accent="#5EEAD4"
+          accent="hsl(var(--color-primary-lighter))"
         />
 
         <TechSection
           title="Database"
           techs={techStack.database}
           delay={0.4}
-          accent="#4CC8C2"
+          accent="hsl(var(--color-primary-lighter))"
         />
 
         <TechSection
           title="Tools"
           techs={techStack.tools}
           delay={0.5}
-          accent="#3AB2A0"
+          accent="hsl(var(--color-primary-lighter))"
         />
       </div>
 

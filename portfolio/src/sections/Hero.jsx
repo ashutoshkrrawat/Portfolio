@@ -2,7 +2,6 @@
 import AnimatedScrollArrow from "../components/MotionSlideArrow";
 import Button from "../components/ModernButton";
 import { WordRotate } from "../components/WordRotate";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import DownloadBtn from "../components/DownloadBtn";
 
 export default function Hero() {
@@ -66,7 +65,7 @@ export default function Hero() {
         font-semibold
         leading-none
         text-transparent bg-clip-text
-        bg-gradient-to-r from-[#10B9B7] to-[#6CF2F0]
+        bg-gradient-to-r from-theme-primary to-theme-primary-light
       "
                             >
                                 Developer

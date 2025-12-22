@@ -38,7 +38,7 @@ export default function ProjectsSection() {
       {/* ===== HEADER ===== */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 mb-20 text-center">
         <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10B9B7] to-[#6CF2F0]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-theme-primary to-theme-primary-light">
             <WordRotate
               words={["Projects", "Creations", "Works"]}
               className="font-doto text-6xl text-white"
@@ -46,14 +46,14 @@ export default function ProjectsSection() {
           </span>
         </h2>
         
-        <div className="mt-8 h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-[#10B9B7] to-transparent rounded-full" />
+        <div className="mt-8 h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-theme-primary to-transparent rounded-full" />
       </div>
 
       {/* ===== CONTENT ===== */}
       <div className="relative z-20 max-w-7xl mx-auto px-6">
 
         {/* ===== FILTER ABOVE PROJECTS ===== */}
-        <div className="mb-10 bg-[#0d1321]/40 border border-white/10 rounded-xl p-5">
+        <div className="mb-10 bg-theme-bg-primary/40 border border-white/10 rounded-xl p-5">
           <TechFilter
             selectedTags={selectedTags}
             toggleTag={toggleTag}
@@ -65,7 +65,7 @@ export default function ProjectsSection() {
               {selectedTags.map((tag) => (
                 <Badge
                   key={tag}
-                  className="bg-[#10B9B7]/10 text-[#10B9B7] border border-[#10B9B7]/30 "
+                  className="bg-theme-primary/10 text-theme-primary border border-theme-primary/30 "
                 >
                   {tag}
                   <button
@@ -98,7 +98,7 @@ export default function ProjectsSection() {
             </p>
             <button
               onClick={clearFilters}
-              className="px-4 py-2 rounded-lg bg-[#10B9B7]/10 border border-[#10B9B7]/30 text-[#10B9B7] hover:bg-[#10B9B7]/20 transition"
+              className="px-4 py-2 rounded-lg bg-theme-primary/10 border border-theme-primary/30 text-theme-primary hover:bg-theme-primary/20 transition"
             >
               Clear Filters
             </button>

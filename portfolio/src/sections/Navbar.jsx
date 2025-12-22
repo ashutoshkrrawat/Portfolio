@@ -91,8 +91,8 @@ export default function Navbar() {
                 w-10 h-10
                 rounded-full
                 object-cover
-                border-2 border-teal-500
-                shadow-[0_0_10px_rgba(16,185,183,0.5)]
+                border-2 border-theme-teal-500
+                shadow-[0_0_10px_hsl(var(--color-primary)/0.5)]
               "
             />
             <span className="text-white font-semibold text-lg hidden sm:block">
@@ -115,7 +115,7 @@ export default function Navbar() {
                     transition-all duration-300
                     ${
                       activeSection === item.name.toLowerCase()
-                        ? "text-teal-400"
+                        ? "text-theme-teal-400"
                         : "text-white/70 hover:text-white"
                     }
                   `}
@@ -123,7 +123,7 @@ export default function Navbar() {
                   {item.name}
 
                   {activeSection === item.name.toLowerCase() && (
-                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-teal-500" />
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-theme-teal-500" />
                   )}
                 </a>
               </li>
@@ -168,7 +168,7 @@ export default function Navbar() {
                         transition-colors
                         ${
                           activeSection === item.name.toLowerCase()
-                            ? "text-teal-400"
+                            ? "text-theme-teal-400"
                             : "text-white/70 hover:text-white"
                         }
                       `}

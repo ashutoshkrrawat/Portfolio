@@ -28,7 +28,7 @@ function GithubHeatmap() {
             "#134e4a",
             "#0f766e",
             "#14b8a6",
-            "#5eead4",
+            "hsl(var(--color-primary-lighter))",
           ],
         }}
       />

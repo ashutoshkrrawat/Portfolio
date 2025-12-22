@@ -9,7 +9,7 @@ const data = [
   { name: "Node js", value: 85, color: "#14d6d2" },
   { name: "MongoDB", value: 30, color: "#0f766e" },
   { name: "Express", value: 50, color: "#134e4a" },
-  { name: "React", value: 75, color: "#5eead4" },
+  { name: "React", value: 75, color: "hsl(var(--color-primary-lighter))" },
 ];
 
 const renderLabel = ({ cx, cy, midAngle, outerRadius, name, value }) => {

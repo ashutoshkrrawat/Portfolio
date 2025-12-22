@@ -82,7 +82,7 @@ export default function PortfolioBento() {
             className="font-doto text-6xl"
           />
         </h2>
-        <div className="mt-6 h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-[#10B9B7] to-transparent rounded-full" />
+        <div className="mt-6 h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-theme-primary to-transparent rounded-full" />
       </div>
 
       {/* ================= BENTO GRID ================= */}
@@ -95,7 +95,7 @@ export default function PortfolioBento() {
           <BentoGridItem
             title={
               <span className="flex items-center gap-2 text-white">
-                <IconBrandGithub className="h-4 w-4 text-[#10B9B7]" />
+                <IconBrandGithub className="h-4 w-4 text-theme-primary" />
                 GitHub Contributions
               </span>
             }
@@ -110,19 +110,19 @@ export default function PortfolioBento() {
                   <GithubContributions />
                 ) : (
                   <div className="flex items-center justify-center h-full ">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#10B9B7] "></div>
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-theme-primary "></div>
                   </div>
                 )}
               </div>
             }
-            className="md:col-span-1 bg-[#0d1321]/30 backdrop-blur-sm border border-white/10 hover:border-[#10B9B7]/40 transition-all duration-500 rounded-xl shadow-lg hover:shadow-[#10B9B7]/10"
+            className="md:col-span-1 bg-theme-bg-primary/30 backdrop-blur-sm border border-white/10 hover:border-theme-primary/40 transition-all duration-500 rounded-xl shadow-lg hover:shadow-theme-primary/10"
           />
 
           {/* Contribution Trend */}
           <BentoGridItem
             title={
               <span className="flex items-center gap-2 text-white">
-                <IconChartRadar className="h-4 w-4 text-[#10B9B7]" />
+                <IconChartRadar className="h-4 w-4 text-theme-primary" />
                 Contribution Trend
               </span>
             }
@@ -151,7 +151,7 @@ export default function PortfolioBento() {
           <BentoGridItem
             title={
               <span className="flex items-center gap-2 text-white">
-                <IconCode className="h-4 w-4 text-[#10B9B7]" />
+                <IconCode className="h-4 w-4 text-theme-primary" />
                 Progress Breakdown
               </span>
             }
@@ -166,19 +166,19 @@ export default function PortfolioBento() {
                   <PieChartWithPaddingAngle />
                 ) : (
                   <div className="flex items-center justify-center h-full">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#6CF2F0]"></div>
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-theme-primary-light"></div>
                   </div>
                 )}
               </div>
             }
-            className="md:col-span-1 bg-[#0d1321]/30 backdrop-blur-sm border border-white/10 hover:border-[#6CF2F0]/40 transition-all duration-500 rounded-xl shadow-lg hover:shadow-[#6CF2F0]/10"
+            className="md:col-span-1 bg-theme-bg-primary/30 backdrop-blur-sm border border-white/10 hover:border-theme-primary-light/40 transition-all duration-500 rounded-xl shadow-lg hover:shadow-theme-primary-light/10"
           />
 
           {/* Radar Chart */}
           <BentoGridItem
             title={
               <span className="flex items-center gap-2 text-white">
-                <IconChartRadar className="h-4 w-4 text-[#10B9B7]" />
+                <IconChartRadar className="h-4 w-4 text-theme-primary" />
                 Skill Overview
               </span>
             }
@@ -198,14 +198,14 @@ export default function PortfolioBento() {
                 )}
               </div>
             }
-            className="md:col-span-1 bg-[#0d1321]/30 backdrop-blur-sm border border-white/10 hover:border-[#10B9B7]/40 transition-all duration-500 rounded-xl shadow-lg hover:shadow-[#10B9B7]/10"
+            className="md:col-span-1 bg-theme-bg-primary/30 backdrop-blur-sm border border-white/10 hover:border-theme-primary/40 transition-all duration-500 rounded-xl shadow-lg hover:shadow-theme-primary/10"
           />
 
           {/* Projects Count */}
           <BentoGridItem
             title={
               <span className="flex items-center gap-2 text-white">
-                <IconTrophy className="h-4 w-4 text-[#10B9B7]" />
+                <IconTrophy className="h-4 w-4 text-theme-primary" />
                 Typing
               </span>
             }
@@ -216,20 +216,20 @@ export default function PortfolioBento() {
             }
             header={
               <div className="flex flex-col items-center justify-center h-full py-4">
-                <span className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#10B9B7] to-[#6CF2F0]">
+                <span className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-theme-primary to-theme-primary-light">
                   93+
                 </span>
                 <span className="text-xs text-gray-400 uppercase tracking-wider mt-2">
                   Current Typing Speed (WPM)
                 </span>
                 <div className="mt-4 flex gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#10B9B7] animate-pulse" />
-                  <div className="w-2 h-2 rounded-full bg-[#10B9B7] animate-pulse" style={{ animationDelay: '150ms' }} />
-                  <div className="w-2 h-2 rounded-full bg-[#10B9B7] animate-pulse" style={{ animationDelay: '300ms' }} />
+                  <div className="w-2 h-2 rounded-full bg-theme-primary animate-pulse" />
+                  <div className="w-2 h-2 rounded-full bg-theme-primary animate-pulse" style={{ animationDelay: '150ms' }} />
+                  <div className="w-2 h-2 rounded-full bg-theme-primary animate-pulse" style={{ animationDelay: '300ms' }} />
                 </div>
               </div>
             }
-            className="md:col-span-1 bg-[#0d1321]/30 backdrop-blur-sm border border-white/10 hover:border-[#10B9B7]/40 transition-all duration-500 rounded-xl shadow-lg hover:shadow-[#10B9B7]/10"
+            className="md:col-span-1 bg-theme-bg-primary/30 backdrop-blur-sm border border-white/10 hover:border-theme-primary/40 transition-all duration-500 rounded-xl shadow-lg hover:shadow-theme-primary/10"
           />
         </BentoGrid>
       </div>

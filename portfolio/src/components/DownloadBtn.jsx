@@ -89,7 +89,7 @@ const StyledWrapper = styled.div`
 
   .label {
     background-color: transparent;
-    border: 2px solid cyan;
+    border: 2px solid hsl(var(--color-primary-lighter));
     display: flex;
     align-items: center;
     border-radius: 50px;
@@ -140,7 +140,7 @@ const StyledWrapper = styled.div`
     height: 45px;
     width: 45px;
     border-radius: 50%;
-    background-color: rgb(9, 140, 149);
+    background-color: hsl(var(--color-primary));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,7 +179,7 @@ const StyledWrapper = styled.div`
     position: absolute;
     left: 0;
     top: 0;
-    background-color: cyan;
+    background-color: hsl(var(--color-primary-lighter));
     width: 100%;
     height: 0;
     transition: all 0.4s ease;
@@ -268,7 +268,7 @@ const StyledWrapper = styled.div`
   @keyframes installed {
     100% {
       width: 150px;
-      border-color: rgb(35, 174, 35);
+      border-color: hsl(var(--color-success));
     }
   }
 

@@ -73,7 +73,7 @@ export default function Socials() {
               className="font-doto"
             />
           </h2>
-                  <div className="mt-8 h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-[#10B9B7] to-transparent rounded-full" />
+                  <div className="mt-8 h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-theme-primary to-transparent rounded-full" />
 
         </div>
         
@@ -87,7 +87,7 @@ export default function Socials() {
         </div>
 
         {/* FORM */}
-        <div className="max-w-lg mx-auto bg-[#0d1321]/40 backdrop-blur-xl p-8 rounded-2xl border border-white/10">
+        <div className="max-w-lg mx-auto bg-theme-bg-primary/40 backdrop-blur-xl p-8 rounded-2xl border border-white/10">
           <h3 className="text-white text-xl font-semibold mb-6">Send a Message</h3>
 
           <div className="space-y-4">
@@ -100,7 +100,7 @@ export default function Socials() {
               onChange={(e) =>
                 setFormData({ ...formData, from_name: e.target.value })
               }
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white rounded-lg placeholder-gray-500 focus:border-teal-500/50 focus:outline-none transition-all"
+              className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white rounded-lg placeholder-gray-500 focus:border-theme-teal-500/50 focus:outline-none transition-all"
               required
             />
 
@@ -113,7 +113,7 @@ export default function Socials() {
               onChange={(e) =>
                 setFormData({ ...formData, from_email: e.target.value })
               }
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white rounded-lg placeholder-gray-500 focus:border-teal-500/50 focus:outline-none transition-all"
+              className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white rounded-lg placeholder-gray-500 focus:border-theme-teal-500/50 focus:outline-none transition-all"
               required
             />
 
@@ -133,7 +133,7 @@ export default function Socials() {
             <button
               onClick={handleSubmit}
               disabled={loading}
-              className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-medium hover:shadow-lg hover:shadow-teal-500/50 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center gap-2"
+              className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-theme-teal-500 to-theme-cyan text-white font-medium hover:shadow-lg hover:shadow-theme-teal-500/50 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center gap-2"
             >
               {loading ? (
                 <>

@@ -98,7 +98,7 @@ export default function About() {
               className="font-doto text-6xl"
             />
           </h2>
-          <div className="mt-4 h-0.5 w-20 mx-auto bg-gradient-to-r from-transparent via-[#10B9B7] to-transparent" />
+          <div className="mt-4 h-0.5 w-20 mx-auto bg-gradient-to-r from-transparent via-theme-primary to-transparent" />
         </div>
       </div>
 
@@ -112,7 +112,7 @@ export default function About() {
             <div className={`transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
                 Hi, I'm{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10B9B7] to-[#6CF2F0]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-theme-primary to-theme-primary-light">
                   Ashutosh
                 </span>
               </h3>
@@ -152,7 +152,7 @@ export default function About() {
                   <Badge
                     key={skill}
                     variant="secondary"
-                    className="bg-white/5 border border-white/10 text-white/70 hover:bg-white/10 hover:border-[#10B9B7]/30 hover:text-teal-300 transition-all duration-300 px-4 py-1.5 text-sm font-normal"
+                    className="bg-white/5 border border-white/10 text-white/70 hover:bg-white/10 hover:border-theme-primary/30 hover:text-theme-teal-300 transition-all duration-300 px-4 py-1.5 text-sm font-normal"
                     style={{
                       animation: `fadeInUp 0.5s ease-out ${idx * 0.08}s backwards`
                     }}
@@ -173,7 +173,7 @@ export default function About() {
                   <Badge
                     key={interest}
                     variant="outline"
-                    className="border-white/20 text-white/60 hover:bg-white/5 hover:text-teal-300 transition-all duration-300 px-4 py-1.5 text-sm font-normal"
+                    className="border-white/20 text-white/60 hover:bg-white/5 hover:text-theme-teal-300 transition-all duration-300 px-4 py-1.5 text-sm font-normal"
                     style={{
                       animation: `fadeInUp 0.5s ease-out ${(idx + skills.length) * 0.08}s backwards`
                     }}
@@ -187,11 +187,11 @@ export default function About() {
             {/* Additional Info */}
             <div className={`pt-4 flex items-center gap-6 text-sm text-white/50 transition-all duration-700 delay-[900ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 bg-[#10B9B7] rounded-full" />
+                <div className="w-1.5 h-1.5 bg-theme-primary rounded-full" />
                 <span>Electrical Engineering Student</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 bg-[#10B9B7] rounded-full" />
+                <div className="w-1.5 h-1.5 bg-theme-primary rounded-full" />
                 <span>Based in India</span>
               </div>
             </div>
@@ -217,12 +217,12 @@ export default function About() {
               />
               
               {/* Subtle Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#060b12]/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-theme-bg-secondary/80 via-transparent to-transparent" />
             </div>
 
             {/* Decorative Corner Elements */}
-            <div className={`absolute -top-4 -right-4 w-20 h-20 border-t-2 border-r-2 border-[#10B9B7]/30 rounded-tr-xl transition-all duration-700 delay-[800ms] ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`} />
-            <div className={`absolute -bottom-4 -left-4 w-20 h-20 border-b-2 border-l-2 border-[#10B9B7]/30 rounded-bl-xl transition-all duration-700 delay-[1000ms] ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`} />
+            <div className={`absolute -top-4 -right-4 w-20 h-20 border-t-2 border-r-2 border-theme-primary/30 rounded-tr-xl transition-all duration-700 delay-[800ms] ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`} />
+            <div className={`absolute -bottom-4 -left-4 w-20 h-20 border-b-2 border-l-2 border-theme-primary/30 rounded-bl-xl transition-all duration-700 delay-[1000ms] ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`} />
           </div>
         </div>
 

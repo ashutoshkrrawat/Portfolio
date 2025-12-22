@@ -1,6 +1,6 @@
 import MagneticButton from "./MagneticButton";
 
-export default function TechSection({ title, techs, delay }) {
+export default function TechSection({ title, techs, delay, accent }) {
   return (
     <div 
       className="flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-white/10 last:border-b-0"
@@ -24,7 +24,7 @@ export default function TechSection({ title, techs, delay }) {
               animation: `fadeInUp 0.6s ease-out ${delay + (index * 0.1)}s backwards`
             }}
           >
-            <MagneticButton tech={tech} />
+            <MagneticButton tech={tech} accent={accent} />
           </div>
         ))}
       </div>

@@ -28,7 +28,7 @@ const data = [
   },
   {
     subject: 'CGPA',
-    A: 80,
+    A: 60,
     B: 90,
     fullMark: 150,
   },

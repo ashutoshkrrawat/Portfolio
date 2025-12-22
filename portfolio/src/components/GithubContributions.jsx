@@ -17,7 +17,7 @@ function GithubHeatmap() {
 
       <GitHubCalendar
         username="ashutoshkrrawat"
-        transformData={(data) => data.slice(-150)}
+        transformData={(data) => data.slice(-140)}
         blockSize={14}
         blockMargin={2}
         fontSize={12}

@@ -16,9 +16,9 @@ export default function Hero() {
         pt-24
       "
     >
-      <div className="max-w-6xl mx-auto w-full flex flex-col items-center text-center gap-14 relative">
+      <div className="max-w-6xl mx-auto w-full flex flex-col items-center text-center gap-12 relative">
         
-        {/* ===== HELLO WORLD (FIXED – FLOW BASED) ===== */}
+        {/* ===== HELLO WORLD ===== */}
         <div className="flex justify-center select-none whitespace-nowrap">
           <div className="flex items-center gap-3">
             <WordRotate
@@ -73,7 +73,7 @@ export default function Hero() {
         </div>
 
         {/* ===== HIGHLIGHT CARDS ===== */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full translate-y-8">
           {[
             {
               label: "Projects Delivered",
@@ -114,11 +114,11 @@ export default function Hero() {
             </div>
           ))}
         </div>
-      </div>
 
-      {/* ===== SCROLL ARROW (STABLE POSITION) ===== */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
-        <AnimatedScrollArrow />
+        {/* ===== SCROLL ARROW (BELOW CARDS) ===== */}
+        <div className="flex justify-center">
+          <AnimatedScrollArrow />
+        </div>
       </div>
     </section>
   );

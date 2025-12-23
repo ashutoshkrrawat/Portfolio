@@ -83,7 +83,7 @@ export default function Hero() {
                     </div>
 
                     {/* highlight cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mb-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mb-16">
                         {[
                             { label: "Projects Delivered", value: "4+", detail: "React / Node" },
                             { label: "Open to", value: "Freelance & Collaborations", detail: "Remote-friendly" },

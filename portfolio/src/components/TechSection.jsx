@@ -14,7 +14,7 @@ export default function TechSection({ title, techs, delay, accent }) {
           {title}
         </h3>
       </div>
-
+ 
       {/* Right - Tech Items */}
       <div className="md:w-3/4 flex flex-wrap gap-x-12 gap-y-12">
         {techs.map((tech, index) => (

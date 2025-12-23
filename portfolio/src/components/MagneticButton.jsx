@@ -31,7 +31,7 @@ export default function MagneticButton({ tech, accent }) {
   };
 
   const accentColor = accent || 'hsl(var(--color-primary))';
-  const uniqueId = `magnetic-btn-${tech.name.replace(/\s+/g, '-')}`;
+  const uniqueId = `magnetic-btn-${tech.name.replace(/[^a-zA-Z0-9]/g, '-')}`;
 
   return (
     <>

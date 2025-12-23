@@ -132,7 +132,11 @@ body{
     @apply bg-background text-foreground;
   }
 }
-
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
 /* @theme inline {
   @keyframes meteor {
   0% {

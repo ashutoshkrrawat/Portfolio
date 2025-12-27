@@ -26,16 +26,15 @@ export default function Hero() {
                         flex items-center gap-3
                         select-none
                         whitespace-nowrap
+                        -translate-y-1/2
                     "
                 >
                     <WordRotate
                         words={["Hello", "Namaste", "Bonjour", "Ciao"]}
                         className="
-                                  inline-block
+                            inline-block
                             font-doto-rounded
                             text-[4vw]      
-                            
-                            
                             text-white
                             "
                     /> <br />
@@ -51,7 +50,7 @@ export default function Hero() {
                     {/* text + CTA */}
                     <div className="max-w-3xl">
                         <p className="text-lg md:text-xl text-white/70 mb-6">
-                            Hi, I am <span className="font-semibold text-white text-lg font-bold">ASHUTOSH</span> <br />
+                            Hi, I am <span className=" text-white text-lg font-bold">ASHUTOSH</span> <br />
                             Welcome to my <span className="font-outfit font-[700] text-white">portfolio</span>
                         </p>
 

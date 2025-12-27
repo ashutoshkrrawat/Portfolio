@@ -9,7 +9,7 @@ const DownloadBtn = () => {
     if (e.target.checked) {
       // Start download
       try {
-        const response = await fetch("/AshutoshResume.pdf");
+        const response = await fetch("/Ashutosh_Resume.pdf");
         
         if (!response.ok) {
           throw new Error("Failed to fetch file");
